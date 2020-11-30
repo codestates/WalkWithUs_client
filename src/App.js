@@ -1,16 +1,17 @@
 import React from 'react';
 import { Switch, Route, Redirect, withRouter} from "react-router-dom"
-import Main from "./components/MainPage"
+import Main from "./components/Main"
 import AboutUs from "./components/AboutUs"
 import MyPage from "./components/MyPage"
-import SignUp from "./components/SignUpPage"
-import UploadVideo from "./components/UploadVideoPage"
-import VideoList from "./components/VideoListPage"
+import SignUp from "./components/SignUp"
+import UploadVideo from "./components/UploadVideo"
+import VideoList from "./components/VideoList"
 import axios from "axios";
 
 // import logo from './logo.svg';
 import './App.css';
-import SignUpPage from './components/SignUpPage';
+
+
 class App extends React.Component {
     constructor(props) {
         super(props);
