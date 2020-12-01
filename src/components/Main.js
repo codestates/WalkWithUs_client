@@ -5,14 +5,14 @@ import axios from "axios";
 import "./Main.css"
 
 
-class MainPage extends Component {
+class Main extends Component {
     render() {
         return (
             <div>
-                
+            
             </div>
         );
     }
 }
 
-export default MainPage;
+export default Main;
