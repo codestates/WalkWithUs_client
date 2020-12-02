@@ -4,7 +4,7 @@ import "./AboutUs.css"
 import axios from "axios";
 
 
-class AboutUsPage extends Component {
+class AboutUs extends Component {
     render() {
         return (
             <div>
@@ -14,4 +14,4 @@ class AboutUsPage extends Component {
     }
 }
 
-export default AboutUsPage;
+export default AboutUs;

@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-class VideoListPage extends Component {
+class VideoList extends Component {
     render() {
         return (
             <div>
@@ -15,4 +15,4 @@ class VideoListPage extends Component {
     }
 }
 
-export default VideoListPage;
+export default VideoList;

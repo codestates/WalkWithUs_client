@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-class SignUpPage extends Component {
+class SignUp extends Component {
     render() {
         return (
             <div>
@@ -15,4 +15,4 @@ class SignUpPage extends Component {
     }
 }
 
-export default SignUpPage;
+export default SignUp;

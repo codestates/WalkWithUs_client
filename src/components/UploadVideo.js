@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 
-class UploadVideoPage extends Component {
+class UploadVideo extends Component {
     render() {
         return (
             <div>
@@ -16,4 +16,4 @@ class UploadVideoPage extends Component {
     }
 }
 
-export default UploadVideoPage;
+export default UploadVideo;
