@@ -6,6 +6,7 @@ import MyPage from "./components/MyPage"
 import SignUp from "./components/SignUp"
 import UploadVideo from "./components/UploadVideo"
 import VideoList from "./components/VideoList"
+import Nav from "./components/Nav"
 import axios from "axios";
 
 // import logo from './logo.svg';
@@ -24,6 +25,10 @@ class App extends React.Component {
     handleIsLoginChange = (res) => {
       this.setState({isLogin: true, userInfo: res}, ()=>{console.log(this.state)})
     }
+    handleIsLogoutChange = () => {
+      this.setState({isLogin:false, userInfo: {}},()=>{console.log(this.state)})
+      this.props.history.push(`/`);
+    }
 
   
 
@@ -31,8 +36,13 @@ class App extends React.Component {
     const {isLogin, userInfo, video} = this.state
     return (
      <div>
+       <Nav
+       isLogin = {isLogin}
+       handleIsLogoutChange={this.handleIsLogoutChange.bind(this)}
+       />
        <Switch>
          <Route
+         exact
          path ={`/`}
          render = {() =>(
            <Main
@@ -59,12 +69,12 @@ class App extends React.Component {
          />
          <Route
          exact
-         path={`video/uploadvideo`}
+         path={`/video/uploadvideo`}
          render={()=><UploadVideo isLogin ={isLogin} userInfo = {userInfo}/>}
          />
          <Route
          exact
-         path={`video/videolist`}
+         path={`/video/videolist`}
          render={()=><VideoList isLogin = {isLogin} userInfo ={userInfo} video = {video}/>}
            />
          

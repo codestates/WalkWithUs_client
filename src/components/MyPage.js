@@ -9,7 +9,7 @@ class MyPage extends Component {
     render() {
         return (
             <div>
-                
+            MyPage
             </div>
         );
     }

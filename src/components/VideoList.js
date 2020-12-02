@@ -9,7 +9,7 @@ class VideoList extends Component {
     render() {
         return (
             <div>
-                
+               VideoList 
             </div>
         );
     }
