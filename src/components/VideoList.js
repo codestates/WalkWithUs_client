@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import {Link} from "react-router-dom"
 import PropTypes from "prop-types";
 import "./VideoList.css"
 import axios from "axios";
@@ -6,10 +7,33 @@ import axios from "axios";
 
 
 class VideoList extends Component {
+    constructor(props){
+        super(props)
+        this.state = {};
+    }
     render() {
+        const {userInfo, isLogin} = this.props
         return (
             <div>
-               VideoList 
+                <div className="videoListBody">
+                <img src={"https://ifh.cc/g/WK91e6.jpg"}/>
+                </div>
+
+
+
+               <div className="videoListFooter">
+                  <Link to= {`/video/uploadvideo`}>
+                   <span>Upload your video</span>
+                  </Link>
+                  <button>walking around the world</button>
+                  <img src={"https://ifh.cc/g/O2JXd9.png"}/>
+                  <span>333</span>
+                  <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
+                  <span>Support us</span>
+                  </Link>
+
+
+               </div>
             </div>
         );
     }
