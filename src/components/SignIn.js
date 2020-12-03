@@ -24,9 +24,9 @@ class SignIn extends Component {
             <>
             {isOpen ?(
             
-            <div className ="modal">
-                <div>
-                    <div className="loginModal">
+            <div className ="modal" onClick={close}>
+                <div className= "modalContainer" >
+                    <div className="loginModal" onClick={(e)=>e.stopPropagation()}>
                         <span className="close" onClick={close}>
                             &times;
                         </span>
