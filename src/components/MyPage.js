@@ -18,7 +18,7 @@ class MyPage extends Component {
                 <div className="mypageContainer">
                     <h1>My page</h1>
                     <form>
-            <div className="email">{`email`}</div>
+            <div className="email">{/*userInfo.*/`email`}</div>
             <div className="username">{`username`}</div>
             <div className="password">비밀번호</div>
             <div className="socialInfo">{`socialInfo`}</div>     
