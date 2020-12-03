@@ -51,9 +51,11 @@ class SignIn extends Component {
                             <button className="loginBtn" onClick={this.loginClickHandler}>
                                 {" "}Login{" "}
                             </button>
+                            <Link to="/user/signup">
                             <button className="signUpBtn">
-                                <Link to="/user/signup"> Signup </Link>
+                                 Signup 
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
