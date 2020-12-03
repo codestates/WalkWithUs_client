@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link, Switch, Route, withRouter} from "react-router-dom";
 import SignIn from "./SignIn"
+import logo from "../image/walkLogo.png"
 
 import "./Nav.css"
 
@@ -36,7 +37,7 @@ class Nav extends Component {
                        return (
                            <div>
                                <Link to={`/`}>
-                               <span className="walkWithUsBtn">로고</span></Link>
+                               <img className="walkWithUsBtn" src={logo} /></Link>
                                    <Link to= {`/aboutus`}><span className="aboutUs">AboutUs</span></Link>
                                    <Link to= {`/user/mypage`}><span className="myPage">MyPage</span></Link>
                                <span className="logOut"
@@ -53,9 +54,9 @@ class Nav extends Component {
                     return (
                         <div>
                             <header className="aboutUs">
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
                             <span>ABOUT US</span>
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
                             </header>
                         </div>
                     )
@@ -67,7 +68,7 @@ class Nav extends Component {
                 render={()=>{
                     return (
                     <div>
-                        <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                         <span>[username] is walking in [country]</span>
                     </div>
                     )
@@ -79,7 +80,7 @@ class Nav extends Component {
                 render={()=>{
                     return (
                         <div>
-                          <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                          <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                           <span className="logOut"
                                onClick={handleIsLogoutChange}
                                >Logout</span>   
@@ -93,7 +94,7 @@ class Nav extends Component {
                 render={()=>{
                     return (
                         <div>
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                         </div>
                     )
                 }}
@@ -110,7 +111,7 @@ class Nav extends Component {
                 render={()=>{
                     return (
                         <div>
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                             <Link to= {`/aboutus`}><span className="aboutUs">aboutUs</span></Link>
                             <span onClick={this.openModal}>로그인</span>
                             <SignIn
@@ -127,7 +128,7 @@ class Nav extends Component {
                 render={()=>{
                     return(
                         <div>
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn"src={logo} /></Link>
                         </div>
                     )
                 }}
@@ -139,9 +140,9 @@ class Nav extends Component {
                     return (
                         <div>
                             <header className="aboutUs">
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                             <span>ABOUT US</span>
-                            <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                             </header>
                         </div>
                     )
@@ -153,7 +154,7 @@ class Nav extends Component {
                 render={()=>{
                     return (
                     <div>
-                        <Link to= {`/`}><span className="walkWithUsBtn">로고</span></Link>
+                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                         <span>[username] is walking in [country]</span>
                     </div>
                     )
