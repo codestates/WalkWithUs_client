@@ -27,7 +27,7 @@ class Main extends Component {
               <Link to ={{pathname: "https://www.instagram.com/walkwithus3/"}} target="_blank">
                 <div>Instagram</div>
               </Link>  
-              <Link to ={{pathname: "https://www.buymeacoffee.com/home"}} target="_blank">
+              <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
                 <div>Support us</div>
               </Link>  
               
