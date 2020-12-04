@@ -14,7 +14,7 @@ class Main extends Component {
         return (
             <div>
              
-             <div className="videoListBody">
+             <div className="mainBody">
               <Link to={`/video/videolist`}>
               <button>walk with us</button>
               </Link>
@@ -23,7 +23,7 @@ class Main extends Component {
               </Link>
              </div>
 
-             <div className="videoListFooter">
+             <div className="mainFooter">
               <Link to ={{pathname: "https://www.instagram.com/walkwithus3/"}} target="_blank">
                 <div>Instagram</div>
               </Link>  
