@@ -1,8 +1,12 @@
 import React, {Component} from "react";
 import "./SignIn.css";
-import {Link} from "react-router-dom"
-;
+import {Link} from "react-router-dom";
+import axios from "axios";
+
 const IP_ADDRESS = "52.78.59.129";
+const axiosInstance = axios.create({
+  withCredentials: true,
+});
 
 class SignIn extends Component {
     constructor(props){
