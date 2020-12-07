@@ -39,6 +39,7 @@ class App extends React.Component {
        <Nav
        isLogin = {isLogin}
        handleIsLogoutChange={this.handleIsLogoutChange.bind(this)}
+       handleIsLoginChange = {this.handleIsLoginChange.bind(this)} 
        />
        <Switch>
          <Route
@@ -48,7 +49,6 @@ class App extends React.Component {
            <Main
            isLogin = {isLogin}
            userInfo = {userInfo}
-           handleIsLoginChange = {this.handleIsLoginChange.bind(this)} 
            />
          ) }
          />

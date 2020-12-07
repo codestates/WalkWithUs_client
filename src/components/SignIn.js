@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./SignIn.css";
 import {Link} from "react-router-dom"
 ;
+const IP_ADDRESS = "";
 
 class SignIn extends Component {
     constructor(props){
@@ -10,16 +11,16 @@ class SignIn extends Component {
             email:"",
             password:""
         }
-        this.loginHandler = this.loginHandler.bind(this)
+        this.handleInputValue = this.handleInputValue.bind(this);
     }
-        loginHandler = (e) =>{
-            const {name, value} = e.target;
-            this.setState({[name]: value})
-        }
-         loginClickHandler = () =>{/*함수 작성 필요*/}
+    handleInputValue = (key) => (e) => {
+        this.setState({ [key]: e.target.value });
+      };
+         
     
     render() {
-        const { isOpen, close} = this.props
+        const {email, password} = this.state;
+        const { isOpen, close, handleIsLoginChange} = this.props
         return (
             <>
             {isOpen ?(
@@ -32,25 +33,49 @@ class SignIn extends Component {
                         </span>
                         <div className="modalContents" >
                             <h1>Login</h1>
+                            <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    if (email && password) {
+                      return axiosInstance
+                        .post(`http://${IP_ADDRESS}:3001/user/signin`, {
+                          email: email,
+                          password: password,
+                        })
+                        .then((res) => {
+                          console.log(res.data);
+                          handleIsLoginChange(res.data);
+                          this.props.history.push(`/`);
+                        })
+                        .catch((err) => {
+                          alert("Login failed");
+                          console.log(err);
+                        });
+                    } else {
+                      alert("아이디와 비밀번호를 입력해주세요");
+                    }
+                  }}
+                >
                             <div>
                             <input
                             name="email"
                             className="loginId"
                             type="text"
                             placeholder="What is your email?"
-                            onChange={this.loginHandler}
+                            onChange={this.handleInputValue("email")}
                             />
                             <input
                             name="password"
                             className="loginPw"
                             type="password"
                             placeholder="What is your password?"
-                            onChange={this.loginHandler}
+                            onChange={this.handleInputValue("password")}
                             />
                             </div>
-                            <button className="loginBtn" onClick={this.loginClickHandler}>
+                            <button className="loginBtn" type="submit">
                                 {" "}Login{" "}
                             </button>
+                            </form>
                             <Link to="/user/signup">
                             <button className="signUpBtn">
                                  Signup 
