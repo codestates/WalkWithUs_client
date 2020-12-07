@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./SignIn.css";
 import {Link} from "react-router-dom"
 ;
-const IP_ADDRESS = "";
+const IP_ADDRESS = "52.78.59.129";
 
 class SignIn extends Component {
     constructor(props){

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./SignUp.css"
 import axios from "axios";
 
-const IP_ADDRESS = "";
+const IP_ADDRESS = "52.78.59.129";
 
 class SignUp extends Component {
     constructor(props){
