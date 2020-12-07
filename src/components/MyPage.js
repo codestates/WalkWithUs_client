@@ -2,6 +2,8 @@ import React,{Component} from "react";
 import PropTypes from "prop-types";
 import "./MyPage.css"
 import axios from "axios";
+import {withRouter} from "react-router-dom"
+
 
 
 
@@ -34,4 +36,4 @@ class MyPage extends Component {
     }
 }
 
-export default MyPage;
+export default withRouter(MyPage);

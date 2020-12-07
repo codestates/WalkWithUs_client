@@ -26,7 +26,7 @@ class Nav extends Component {
 
 
     render() {
-        const {isLogin, handleIsLogoutChange} = this.props
+        const {isLogin, handleIsLogoutChange, handleIsLoginChange} = this.props
         if(isLogin){
             return (
                <Switch>
@@ -115,7 +115,7 @@ class Nav extends Component {
                             <Link to= {`/aboutus`}><span className="aboutUs">aboutUs</span></Link>
                             <span onClick={this.openModal}>로그인</span>
                             <SignIn
-                            isOpen={this.state.isModalOpen} close={this.closeModal}
+                            isOpen={this.state.isModalOpen} close={this.closeModal} handleIsLoginChange={handleIsLoginChange}
                             
                             />
                         </div>
@@ -168,4 +168,4 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+export default withRouter(Nav);

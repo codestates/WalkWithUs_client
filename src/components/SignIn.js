@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import "./SignIn.css";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import axios from "axios";
 
-const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "127.0.0.1";
 const axiosInstance = axios.create({
-  withCredentials: true,
+  withCredentials: false,
 });
 
 class SignIn extends Component {
@@ -97,4 +97,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default withRouter(SignIn);

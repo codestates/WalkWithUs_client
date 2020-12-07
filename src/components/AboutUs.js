@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import PropTypes from "prop-types";
 import "./AboutUs.css"
 import axios from "axios";
+import {withRouter} from "react-router-dom"
 
 
 class AboutUs extends Component {
@@ -14,4 +15,4 @@ class AboutUs extends Component {
     }
 }
 
-export default AboutUs;
+export default withRouter(AboutUs);
