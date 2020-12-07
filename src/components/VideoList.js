@@ -1,8 +1,9 @@
 import React,{Component} from "react";
-import {Link} from "react-router-dom"
+import {Link, withRouter} from "react-router-dom"
 import PropTypes from "prop-types";
 import "./VideoList.css"
 import axios from "axios";
+import heart from "../image/heart.png"
 
 
 
@@ -26,7 +27,7 @@ class VideoList extends Component {
                    <span>Upload your video</span>
                   </Link>
                   <button>walking around the world</button>
-                  <img src={"https://ifh.cc/g/O2JXd9.png"}/>
+                  <img className="heart" src={heart}/>
                   <span>333</span>
                   <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
                   <span>Support us</span>
@@ -39,4 +40,4 @@ class VideoList extends Component {
     }
 }
 
-export default VideoList;
+export default withRouter(VideoList);

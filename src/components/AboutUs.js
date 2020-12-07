@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import PropTypes from "prop-types";
 import "./AboutUs.css"
 import axios from "axios";
+import {withRouter} from "react-router-dom"
 
 import Introduce from "./introduce"
 import ShareStory from "./shareYourStory"
@@ -103,4 +104,4 @@ Share your memories here
     }
 }
 
-export default AboutUs;
+export default withRouter(AboutUs);

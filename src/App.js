@@ -27,7 +27,7 @@ class App extends React.Component {
     }
     handleIsLogoutChange = () => {
       this.setState({isLogin:false, userInfo: {}},()=>{console.log(this.state)})
-      this.props.history.push(`/`);
+      this.props.history.go(0);
     }
 
   
@@ -87,4 +87,4 @@ class App extends React.Component {
 
   
 
-export default App;
+export default withRouter(App);

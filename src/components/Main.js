@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom"
+import {Link, withRouter} from "react-router-dom"
 import axios from "axios";
 import "./Main.css"
 
@@ -38,4 +38,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(Main);
