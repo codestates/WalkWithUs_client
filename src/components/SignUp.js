@@ -36,7 +36,7 @@ class SignUp extends Component {
                             .post(`http://${IP_ADDRESS}:3001/user/signup`, {
                               email: email,
                               password: password,
-                              nickName: username,
+                              username: username,
                             })
                             .then(() => {
                               this.props.history.push(`/`);
