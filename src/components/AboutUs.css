@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+.blue {
+  color: #12cdd4;
+}
+.darkGreen {
+  color: #94a828;
+}
+.orange {
+  color: #fac710;
+}
+.black {
+  transform: scale(1.1);
+  color: black;
+  font-size: 60px;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+}
+
+.apricot {
+  color: #ffbfbf;
+}
+
+.yellowGreen {
+  color: #8fd14f;
+}
+.pink {
+  color: #da0063;
+}
+
+.image1 {
+  width: 500px;
+}
+
+.image2 {
+  width: 500px;
+}
