@@ -80,7 +80,7 @@ class Nav extends Component {
                 />
                 <Route
                 exact
-                path={`/video/uploadvideo`}
+                path={`/video/videoup`}
                 render={()=>{
                     return (
                         <div>

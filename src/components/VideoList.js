@@ -23,7 +23,7 @@ class VideoList extends Component {
 
 
                <div className="videoListFooter">
-                  <Link to= {`/video/uploadvideo`}>
+                  <Link to= {`/video/videoup`}>
                    <span>Upload your video</span>
                   </Link>
                   <button>walking around the world</button>

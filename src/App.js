@@ -86,7 +86,7 @@ class App extends React.Component {
          />
          <Route
          exact
-         path={`/video/uploadvideo`}
+         path={`/video/videoup`}
          render={()=><UploadVideo isLogin ={isLogin} userInfo = {userInfo}/>}
          />
          <Route
