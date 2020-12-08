@@ -18,16 +18,30 @@ class App extends React.Component {
         this.state = {
             isLogin: false,
             userInfo: {},
-            video: {}
+            video: {},
+            isModalOpen:false,
         };
+        this.openModal = this.openModal.bind(this)
+        this.closeModal = this.closeModal.bind(this)
+
     }
+
+  openModal = () => {
+      this.setState({isModalOpen: true})
+  }
+
+  closeModal = () =>{
+      this.setState({isModalOpen: false})
+  }
+
+
     
     handleIsLoginChange = (res) => {
       this.setState({isLogin: true, userInfo: res}, ()=>{console.log(this.state)})
     }
     handleIsLogoutChange = () => {
-      this.setState({isLogin:false, userInfo: {}},()=>{console.log(this.state)})
-      this.props.history.go(0);
+      this.setState({isLogin:false, userInfo: {},isModalOpen: false },()=>{console.log(this.state)})
+      this.props.history.push(`/`);
     }
 
   
@@ -37,9 +51,12 @@ class App extends React.Component {
     return (
      <div>
        <Nav
+       isOpen = {this.state.isModalOpen}
        isLogin = {isLogin}
        handleIsLogoutChange={this.handleIsLogoutChange.bind(this)}
        handleIsLoginChange = {this.handleIsLoginChange.bind(this)} 
+       openModal = {this.openModal}
+       closeModal = {this.closeModal}
        />
        <Switch>
          <Route

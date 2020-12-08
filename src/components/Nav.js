@@ -8,24 +8,12 @@ import "./Nav.css"
 class Nav extends Component {
     constructor(props){
         super(props);
-        this.state = {isModalOpen:false};
-        this.openModal = this.openModal.bind(this)
-        this.closeModal = this.closeModal.bind(this)
+        this.state = {};
     }
     
 
-    openModal = () => {
-        this.setState({isModalOpen: true})
-    }
-
-    closeModal = () =>{
-        this.setState({isModalOpen: false})
-    }
-
-
-
-
     render() {
+        const {isOpen, openModal, closeModal} = this.props
         const {isLogin, handleIsLogoutChange, handleIsLoginChange} = this.props
         if(isLogin){
             return (
@@ -81,9 +69,11 @@ class Nav extends Component {
                     return (
                         <div>
                           <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
+                        
                           <span className="logOut"
                                onClick={handleIsLogoutChange}
-                               >Logout</span>   
+                               >Logout</span>  
+
                         </div>
                     )
                 }}
@@ -113,9 +103,9 @@ class Nav extends Component {
                         <div>
                             <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                             <Link to= {`/aboutus`}><span className="aboutUs">aboutUs</span></Link>
-                            <span onClick={this.openModal}>로그인</span>
+                            <span onClick={openModal}>로그인</span>
                             <SignIn
-                            isOpen={this.state.isModalOpen} close={this.closeModal} handleIsLoginChange={handleIsLoginChange}
+                            isOpen={isOpen} close={closeModal} handleIsLoginChange={handleIsLoginChange}
                             
                             />
                         </div>
