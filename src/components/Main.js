@@ -18,7 +18,7 @@ class Main extends Component {
               <Link to={`/video/videolist`}>
               <button>walk with us</button>
               </Link>
-              <Link to={`/video/uploadvideo`}>
+              <Link to={`/video/videoup`}>
               <div>Upload your video here</div>
               </Link>
              </div>
