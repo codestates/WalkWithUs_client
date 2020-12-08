@@ -61,20 +61,17 @@ class MyPage extends Component {
             onChange={this.handleInputValue("username")}
             ></input>
             </div>
-            <div className ="input">
-            <input type="password" placeholder="enter your password"
-           
-            ></input>
-            </div>
-            <div className ="input">
-            <input type="password" placeholder="check your password" onChange={this.handleInputValue("password")}>
             
-            </input>
-            </div>
+            
             <div className ="input">
             <input type="text"  value={`${socialinfo}`}
             onChange={this.handleInputValue("socialinfo")}
             ></input>
+            </div>
+            <div className ="input">
+            <input type="password" placeholder="enter your own password" onChange={this.handleInputValue("password")}>
+            
+            </input>
             </div>
 
 
