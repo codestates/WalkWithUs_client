@@ -38,7 +38,7 @@ class SignUp extends Component {
                       username: username,
                     })
                     .then((res) => {
-                      window.location = "/";
+                      this.props.history.push(`/`);
                       alert("가입이 완료되었습니다!");
                     })
                     .catch((err) => console.log(err));
