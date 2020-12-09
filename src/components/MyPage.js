@@ -22,12 +22,26 @@ class MyPage extends Component {
         }
         this.handleInputValue = this.handleInputValue.bind(this);
     }
+
+
+    componentDidMount(){
+      const userInfo = sessionStorage.getItem('userInfo')
+      if(userInfo){
+        this.setState({email: JSON.parse(userInfo).email,
+                      username:JSON.parse(userInfo).username,
+                      
+                      socialinfo: JSON.parse(userInfo).socialinfo
+                    })
+      }
+    }
+    
+
     handleInputValue = (key) => (e) => {
         this.setState({ [key]: e.target.value });
       };
     render() {
         const {email, username, password, socialinfo} = this.state
-        const {isLogin, userInfo} = this.props;
+        const {isLogin, userInfo, handleIsLoginChange} = this.props;
         if(isLogin){
             return (
                 <div className="mypageContainer">
@@ -43,8 +57,9 @@ class MyPage extends Component {
                           socialinfo:socialinfo
                           })
                           .then((res) => {
-                             alert("Member information has been modified.")
                             console.log(res);
+                            handleIsLoginChange(JSON.parse(res.config.data))
+                            alert("Member information has been modified.")
                           })
                           .catch((err) => {
                             alert("Please check your password");

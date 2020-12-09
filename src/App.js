@@ -26,6 +26,8 @@ class App extends React.Component {
 
     }
 
+
+
   openModal = () => {
       this.setState({isModalOpen: true})
   }
@@ -33,13 +35,20 @@ class App extends React.Component {
   closeModal = () =>{
       this.setState({isModalOpen: false})
   }
-
+    componentDidMount(){
+      const userInfo = sessionStorage.getItem('userInfo')
+      if(userInfo){
+        this.setState({isLogin: true, userInfo: JSON.parse(userInfo)})
+      }
+    }
 
     
     handleIsLoginChange = (res) => {
       this.setState({isLogin: true, userInfo: res}, ()=>{console.log(this.state)})
+      sessionStorage.setItem("userInfo",  JSON.stringify(this.state.userInfo))
     }
     handleIsLogoutChange = () => {
+      sessionStorage.clear();
       this.setState({isLogin:false, userInfo: {},isModalOpen: false },()=>{console.log(this.state)})
       this.props.history.push(`/`);
     }
@@ -77,8 +86,8 @@ class App extends React.Component {
          <Route
          exact
          path={`/user/mypage`}
-         render={()=><MyPage isLogin = {isLogin} userInfo={userInfo}/>}
-         />
+         render={()=><MyPage isLogin = {isLogin} userInfo={userInfo} handleIsLoginChange = {this.handleIsLoginChange.bind(this)} />}
+        />
          <Route
          exact
          path={`/aboutus`}
