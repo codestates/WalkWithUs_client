@@ -43,6 +43,7 @@ class MyPage extends Component {
                           socialinfo:socialinfo
                           })
                           .then((res) => {
+                             alert("회원정보가 수정되었습니다")
                             console.log(res);
                           })
                           .catch((err) => {
