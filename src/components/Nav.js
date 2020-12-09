@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Link, Switch, Route, withRouter} from "react-router-dom";
 import SignIn from "./SignIn"
 import logo from "../image/walkLogo.png"
-
 import "./Nav.css"
 
 class Nav extends Component {
@@ -26,8 +25,8 @@ class Nav extends Component {
                            <div>
                                <Link to={`/`}>
                                <img className="walkWithUsBtn" src={logo} /></Link>
-                                   <Link to= {`/aboutus`}><span className="aboutUs">AboutUs</span></Link>
-                                   <Link to= {`/user/mypage`}><span className="myPage">MyPage</span></Link>
+                                   <Link to= {`/aboutus`} className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>
+                                   <Link to= {`/user/mypage`} className="myPageNav"><span className="myPage">MyPage</span></Link>
                                <span className="logOut"
                                onClick={handleIsLogoutChange}
                                >Logout</span>   
@@ -102,8 +101,8 @@ class Nav extends Component {
                     return (
                         <div>
                             <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <Link to= {`/aboutus`}><span className="aboutUs">aboutUs</span></Link>
-                            <span onClick={openModal}>로그인</span>
+                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">aboutUs</span></Link>
+                            <span className="logIn" onClick={openModal}>login</span>
                             <SignIn
                             isOpen={isOpen} close={closeModal} handleIsLoginChange={handleIsLoginChange}
                             

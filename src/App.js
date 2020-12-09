@@ -8,9 +8,10 @@ import UploadVideo from "./components/UploadVideo"
 import VideoList from "./components/VideoList"
 import Nav from "./components/Nav"
 import axios from "axios";
+import './App.css';
 
 // import logo from './logo.svg';
-import './App.css';
+
 
 class App extends React.Component {
     constructor(props) {

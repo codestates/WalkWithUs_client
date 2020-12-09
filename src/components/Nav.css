@@ -4,3 +4,19 @@
   height: 50px;
   z-index: 10000;
 }
+
+.aboutUsNav {
+  text-decoration: none;
+  color: white;
+}
+
+.myPageNav {
+  text-decoration: none;
+  color: white;
+}
+.logOut {
+  color: white;
+}
+.logIn {
+  color: white;
+}
