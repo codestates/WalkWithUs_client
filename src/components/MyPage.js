@@ -43,11 +43,11 @@ class MyPage extends Component {
                           socialinfo:socialinfo
                           })
                           .then((res) => {
-                             alert("회원정보가 수정되었습니다")
+                             alert("Member information has been modified.")
                             console.log(res);
                           })
                           .catch((err) => {
-                            alert("회원정보 수정에 실패했습니다");
+                            alert("Please check your password");
                             console.log(err);
                           });
                       }}
@@ -58,14 +58,14 @@ class MyPage extends Component {
             </div>
             <div className ="input">
             <input type="username" value={`${username}`}
-            
+            placeholder="enter your username"
             onChange={this.handleInputValue("username")}
             ></input>
             </div>
             
             
             <div className ="input">
-            <input type="text"  value={`${socialinfo}`}
+            <input type="text"  value={`${socialinfo}`} placeholder="enter your social info"
             onChange={this.handleInputValue("socialinfo")}
             ></input>
             </div>
