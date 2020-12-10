@@ -34,21 +34,7 @@ class Nav extends Component {
                        )
                    }}
                    />
-                     <Route
-                exact
-                path={`/aboutus`}
-                render={()=>{
-                    return (
-                        <div>
-                            <header className="aboutUs">
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
-                            <span>ABOUT US</span>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
-                            </header>
-                        </div>
-                    )
-                }}
-                />
+               
               
                 <Route
                 exact
@@ -66,17 +52,7 @@ class Nav extends Component {
                     )
                 }}
                 />
-                <Route
-                exact
-                path={`/video/videoup`}
-                render={()=>{
-                    return (
-                        <div>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        </div>
-                    )
-                }}
-                />
+               
                </Switch>
             );
         }
@@ -111,21 +87,7 @@ class Nav extends Component {
                     )
                 }}
                 />
-                <Route
-                exact
-                path={`/aboutus`}
-                render={()=>{
-                    return (
-                        <div>
-                            <header className="aboutUs">
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <span>ABOUT US</span>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            </header>
-                        </div>
-                    )
-                }}
-                />
+             
               
             </Switch>
         )   

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./VideoList.css"
 import axios from "axios";
 import heart from "../image/heart.png"
-import logo from "../image/walkLogo.png"
+import logo from "../image/walkLogoBlack.png"
 
 
 

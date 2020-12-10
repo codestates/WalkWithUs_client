@@ -4,10 +4,9 @@ import PropTypes from "prop-types";
 import "./AboutUs.css"
 import axios from "axios";
 import {withRouter} from "react-router-dom"
-
 import Introduce from "./introduce"
 import ShareStory from "./shareYourStory"
-
+import logo from "../image/walkLogoBlack.png"
 
 
 class AboutUs extends Component {
@@ -22,6 +21,13 @@ class AboutUs extends Component {
                 <div className="aboutUsPage">
                 <div className="page1">
                 <div className="challenge container">
+                <div>
+                            <header className="aboutUs">
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
+                            <span>ABOUT US</span>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
+                            </header>
+                        </div>
                 <Link to ={{pathname: "https://www.instagram.com/walkwithus3/"}} target="_blank">
                     <span className="blue">#같이 걸어요</span>
                     </Link>
