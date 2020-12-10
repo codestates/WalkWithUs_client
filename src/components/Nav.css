@@ -1,44 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 .walkWithUsBtn {
-  background-image: url("../image/walkLogo.png");
-  width: 50px;
-  height: 50px;
-  z-index: 10000;
+  width: 100px;
+  height: 100px;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 
 .aboutUsNav {
   text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: black;
+  font-family: "Inter", sans-serif;
 }
 
 .myPageNav {
   text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: black;
+  font-family: "Inter", sans-serif;
 }
 .logOut {
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: black;
+  font-family: "Inter", sans-serif;
+  top: 0px;
+  right: 0px;
 }
 .logIn {
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: black;
+  font-family: "Inter", sans-serif;
 }
 .loginMainNav {
+  margin-top: -50px;
   font-size: 33px;
   z-index: 10;
+  position: absolute;
 }
 
 .loginMypageNav {
   font-size: 33px;
   z-index: 10;
+  position: fixed;
+
+  top: -50px;
 }
 .logOutMainNav {
+  margin-top: -50px;
   font-size: 33px;
   z-index: 10;
+  position: absolute;
 }
 .signupNav {
   font-size: 33px;
   z-index: 10;
+  position: fixed;
+  top: -50px;
+}
+.loginRightSide {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+}
+.logOutRightSide {
+  position: fixed;
+  right: 40px;
+  top: 30px;
 }

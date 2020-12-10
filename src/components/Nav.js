@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link, Switch, Route, withRouter} from "react-router-dom";
 import SignIn from "./SignIn"
-import logo from "../image/walkLogo.png"
+import logo from "../image/walkLogoBlack.png"
 import "./Nav.css"
 
 class Nav extends Component {
@@ -25,11 +25,12 @@ class Nav extends Component {
                            <div className="loginMainNav">
                                <Link to={`/`}>
                                <img className="walkWithUsBtn" src={logo} /></Link>
-                                   <Link to= {`/aboutus`} className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>
-                                   <Link to= {`/user/mypage`} className="myPageNav"><span className="myPage">MyPage</span></Link>
+                                  <span className="loginRightSide">
+                       <Link to= {`/aboutus`} className="aboutUsNav "><span className="aboutUs">AboutUs</span></Link>&nbsp;&nbsp;&nbsp;
+                                   <Link to= {`/user/mypage`} className="myPageNav"><span className="myPage">MyPage</span></Link>&nbsp;&nbsp;&nbsp;
                                <span className="logOut"
                                onClick={handleIsLogoutChange}
-                               >Logout</span>   
+                               >Logout</span>   </span>
                            </div>
                        )
                    }}
@@ -43,11 +44,11 @@ class Nav extends Component {
                     return (
                         <div className="loginMypageNav">
                           <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        
+                      
                           <span className="logOut"
                                onClick={handleIsLogoutChange}
                                >Logout</span>  
-
+                           
                         </div>
                     )
                 }}
@@ -66,12 +67,12 @@ class Nav extends Component {
                     return (
                         <div className="logOutMainNav">
                             <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>
-                            <span className="logIn" onClick={openModal}>login</span>
+                            <span className="logOutRightSide">
+                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>&nbsp;&nbsp;&nbsp;
+                            <span className="logIn" onClick={openModal}>Login</span>
                             <SignIn
                             isOpen={isOpen} close={closeModal} handleIsLoginChange={handleIsLoginChange}
-                            
-                            />
+                            /></span>
                         </div>
                     )
                 }}

@@ -11,7 +11,7 @@ body {
 }
 .videoContainer {
   width: 100%;
-  height: 950px;
+  height: 1008px;
   overflow: hidden;
   margin: 0px auto;
   position: relative;
@@ -19,8 +19,8 @@ body {
 }
 
 .walkBtn {
-  position: absolute;
-  top: 55%;
+  position: fixed;
+  top: 51%;
   left: 50%;
   width: 700px;
   height: 90px;
@@ -42,8 +42,8 @@ body {
 }
 
 .uploadClick {
-  position: absolute;
-  top: 65%;
+  position: fixed;
+  top: 61%;
   left: 50%;
   margin-left: -179px;
   width: 400px;
@@ -52,19 +52,27 @@ body {
   font-family: "Roboto", sans-serif;
   z-index: 0;
 }
-.mainFooter {
-  font-size: 20px;
-}
+
 .instagramLink {
+  position: absolute;
+  margin-left: 29px;
+  top: 95%;
   text-decoration: none;
   color: white;
+  font-size: 29px;
   font-family: "Quicksand", sans-serif;
 }
 
 .supportLink {
+  position: absolute;
+  top: 95%;
   text-decoration: none;
   color: white;
+  font-size: 26px;
   font-family: "Quicksand", sans-serif;
+  margin-right: 29px;
+  right: 0px;
+  bottom: 0px;
 }
 
 .mainBody {
