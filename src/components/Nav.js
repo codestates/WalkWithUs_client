@@ -49,18 +49,7 @@ class Nav extends Component {
                     )
                 }}
                 />
-                 <Route
-                exact
-                path={`/video/videolist`}
-                render={()=>{
-                    return (
-                    <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        <span>[username] is walking in [country]</span>
-                    </div>
-                    )
-                }}
-                />
+              
                 <Route
                 exact
                 path={`/user/mypage`}
@@ -137,18 +126,7 @@ class Nav extends Component {
                     )
                 }}
                 />
-                <Route
-                exact
-                path={`/video/videolist`}
-                render={()=>{
-                    return (
-                    <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        <span>[username] is walking in [country]</span>
-                    </div>
-                    )
-                }}
-                />
+              
             </Switch>
         )   
         }
