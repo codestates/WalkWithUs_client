@@ -80,7 +80,7 @@ class MyPage extends Component {
             
             
             <div className ="input">
-            <input type="text"  value={`${socialinfo}`} placeholder="enter your social info"
+            <input type="text"  value={socialinfo?socialinfo:``} placeholder="enter your social info"
             onChange={this.handleInputValue("socialinfo")}
             ></input>
             </div>
