@@ -22,7 +22,7 @@ class Nav extends Component {
                    path={`/`}
                    render={()=>{
                        return (
-                           <div>
+                           <div className="loginMainNav">
                                <Link to={`/`}>
                                <img className="walkWithUsBtn" src={logo} /></Link>
                                    <Link to= {`/aboutus`} className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>
@@ -41,7 +41,7 @@ class Nav extends Component {
                 path={`/user/mypage`}
                 render={()=>{
                     return (
-                        <div>
+                        <div className="loginMypageNav">
                           <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
                         
                           <span className="logOut"
@@ -64,9 +64,9 @@ class Nav extends Component {
                 path={`/`}
                 render={()=>{
                     return (
-                        <div>
+                        <div className="logOutMainNav">
                             <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">aboutUs</span></Link>
+                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>
                             <span className="logIn" onClick={openModal}>login</span>
                             <SignIn
                             isOpen={isOpen} close={closeModal} handleIsLoginChange={handleIsLoginChange}
@@ -81,7 +81,7 @@ class Nav extends Component {
                 path={`/user/signup`}
                 render={()=>{
                     return(
-                        <div>
+                        <div className="signupNav">
                             <Link to= {`/`}><img className="walkWithUsBtn"src={logo} /></Link>
                         </div>
                     )

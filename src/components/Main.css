@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 video {
   width: 100%;
 }
@@ -12,38 +15,59 @@ body {
   overflow: hidden;
   margin: 0px auto;
   position: relative;
+  z-index: -10;
 }
 
 .walkBtn {
   position: absolute;
   top: 55%;
-  width: 550px;
-  height: 80px;
-  font-size: 25px;
+  left: 50%;
+  width: 700px;
+  height: 90px;
+  font-family: "Quicksand", sans-serif;
   border-width: 1px;
   border-radius: 15px;
   border-color: white;
   background-color: rgba(255, 255, 255, 0);
+  margin-left: -370px;
+  text-align: center;
+  z-index: 0;
 }
 .walkBtn p {
   text-align: center;
   vertical-align: middle;
   color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 63px;
 }
 
 .uploadClick {
   position: absolute;
-  top: 63%;
-  width: 200px;
+  top: 65%;
+  left: 50%;
+  margin-left: -179px;
+  width: 400px;
   color: white;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  z-index: 0;
 }
-
+.mainFooter {
+  font-size: 20px;
+}
 .instagramLink {
   text-decoration: none;
   color: white;
+  font-family: "Quicksand", sans-serif;
 }
 
 .supportLink {
   text-decoration: none;
   color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+.mainBody {
+  margin: 0px auto;
+  position: relative;
 }

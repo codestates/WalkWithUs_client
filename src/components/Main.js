@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Main.css"
 import video from "../video/walk.mp4"
 import { Switch } from "@material-ui/core";
+import {GlobalStyle, Wrapper} from "./MainStyle"
 
 
 
@@ -26,9 +27,9 @@ class Main extends Component {
         return (
           
           <div>
-           
+            <GlobalStyle />
            <div className="mainBody">
-            <div class="videoContainer">
+            <div className="videoContainer">
            <video autoPlay="autoplay" muted="muted" loop>
     <source src={video} type="video/mp4"/>
    </video>
@@ -40,7 +41,7 @@ class Main extends Component {
 
             
             <Link to={`/video/videoup`}>
-            <div className="uploadClick"><p>Upload your video here</p></div>
+            <div className="uploadClick"><p>upload your video here</p></div>
             </Link>
             
             </div>
@@ -61,26 +62,28 @@ class Main extends Component {
       }else{
         return(
           <div>
+            <GlobalStyle />
            
           <div className="mainBody">
-           <div class="videoContainer">
+           <div className="videoContainer">
           <video autoPlay="autoplay" muted="muted" loop>
    <source src={video} type="video/mp4"/>
   </video>
    </div>
+
+    <Wrapper>
            <div className="middleBtn">
            <Link to={`/video/videolist`}>
            <button className ="walkBtn"><p>walk with us</p></button>
            </Link>
 
            
-           
-           <div className="uploadClick"  onClick={this.alertBtn}><p>Upload your video here</p></div>
-           
+           <div className="uploadClick"  onClick={this.alertBtn}><p>upload your video here</p></div>
            
            </div>
+           </Wrapper>
           </div>
-    
+          
           <div className="mainFooter">
            <Link to  ={{pathname: "https://www.instagram.com/walkwithus3/"}} className="instagramLink" target="_blank">
              <span>Instagram</span>
@@ -90,7 +93,7 @@ class Main extends Component {
            </Link>  
            
           </div>
-
+         
          </div>
         )
       }
