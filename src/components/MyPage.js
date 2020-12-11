@@ -59,10 +59,10 @@ class MyPage extends Component {
                           .then((res) => {
                             console.log(res);
                             handleIsLoginChange(JSON.parse(res.config.data))
-                            alert("Member information has been modified.")
+                            alert("회원정보가 수정되었습니다")
                           })
                           .catch((err) => {
-                            alert("Please check your password");
+                            alert("비밀번호를 확인해 주세요");
                             console.log(err);
                           });
                       }}

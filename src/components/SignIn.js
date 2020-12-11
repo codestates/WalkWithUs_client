@@ -54,11 +54,11 @@ class SignIn extends Component {
                           
                         })
                         .catch((err) => {
-                          alert("Please check your membership information");
+                          alert("아이디와 비밀번호를 확인해 주세요");
                           console.log(err);
                         });
                     } else {
-                      alert("Please fill in both your ID and password");
+                      alert("아이디와 비밀번호를 모두 입력해 주세요");
                     }
                   }}
                 >

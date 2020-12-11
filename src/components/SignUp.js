@@ -5,6 +5,7 @@ import "./SignUp.css";
 import axios from "axios";
 // const IP_ADDRESS = "52.78.59.129";
 const IP_ADDRESS = "localhost"
+
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -40,13 +41,13 @@ class SignUp extends Component {
                     })
                     .then((res) => {
                       this.props.history.push(`/`);
-                      alert("Membership has been completed!");
+                      alert("회원가입이 완료되었습니다!");
                     })
                     .catch((err) =>
-                    alert("You are already a registered member")
+                    alert("이미 등록된 회원입니다")
                     );
                 } else {
-                  alert("Please fill out all the information");
+                  alert("회원정보를 모두 입력해 주세요");
                 }
               }}
             >
