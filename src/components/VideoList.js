@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import "./VideoList.css"
 import axios from "axios";
 import heart from "../image/heart.png"
+import logo from "../image/walkLogoBlack.png"
 
 
 
@@ -15,7 +16,12 @@ class VideoList extends Component {
     render() {
         const {userInfo, isLogin} = this.props
         return (
+
             <div>
+                <div>
+                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
+                        <span>[username] is walking in [country]</span>
+                    </div>
                 <div className="videoListBody">
                 <img src={"https://ifh.cc/g/WK91e6.jpg"}/>
                 </div>

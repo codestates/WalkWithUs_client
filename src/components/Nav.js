@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {Link, Switch, Route, withRouter} from "react-router-dom";
 import SignIn from "./SignIn"
-import logo from "../image/walkLogo.png"
-
+import logo from "../image/walkLogoBlack.png"
 import "./Nav.css"
 
 class Nav extends Component {
@@ -23,72 +22,38 @@ class Nav extends Component {
                    path={`/`}
                    render={()=>{
                        return (
-                           <div>
+                           <div className="loginMainNav">
                                <Link to={`/`}>
                                <img className="walkWithUsBtn" src={logo} /></Link>
-                                   <Link to= {`/aboutus`}><span className="aboutUs">AboutUs</span></Link>
-                                   <Link to= {`/user/mypage`}><span className="myPage">MyPage</span></Link>
+                                  <span className="loginRightSide">
+                       <Link to= {`/aboutus`} className="aboutUsNav "><span className="aboutUs">AboutUs</span></Link>&nbsp;&nbsp;&nbsp;
+                                   <Link to= {`/user/mypage`} className="myPageNav"><span className="myPage">MyPage</span></Link>&nbsp;&nbsp;&nbsp;
                                <span className="logOut"
                                onClick={handleIsLogoutChange}
-                               >Logout</span>   
+                               >Logout</span>   </span>
                            </div>
                        )
                    }}
                    />
-                     <Route
-                exact
-                path={`/aboutus`}
-                render={()=>{
-                    return (
-                        <div>
-                            <header className="aboutUs">
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
-                            <span>ABOUT US</span>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo} /></Link>
-                            </header>
-                        </div>
-                    )
-                }}
-                />
-                 <Route
-                exact
-                path={`/video/videolist`}
-                render={()=>{
-                    return (
-                    <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        <span>[username] is walking in [country]</span>
-                    </div>
-                    )
-                }}
-                />
+               
+              
                 <Route
                 exact
                 path={`/user/mypage`}
                 render={()=>{
                     return (
-                        <div>
+                        <div className="loginMypageNav">
                           <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        
+                      
                           <span className="logOut"
                                onClick={handleIsLogoutChange}
                                >Logout</span>  
-
+                           
                         </div>
                     )
                 }}
                 />
-                <Route
-                exact
-                path={`/video/videoup`}
-                render={()=>{
-                    return (
-                        <div>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        </div>
-                    )
-                }}
-                />
+               
                </Switch>
             );
         }
@@ -100,14 +65,14 @@ class Nav extends Component {
                 path={`/`}
                 render={()=>{
                     return (
-                        <div>
+                        <div className="logOutMainNav">
                             <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <Link to= {`/aboutus`}><span className="aboutUs">aboutUs</span></Link>
-                            <span onClick={openModal}>로그인</span>
+                            <span className="logOutRightSide">
+                            <Link to= {`/aboutus`}  className="aboutUsNav"><span className="aboutUs">AboutUs</span></Link>&nbsp;&nbsp;&nbsp;
+                            <span className="logIn" onClick={openModal}>Login</span>
                             <SignIn
                             isOpen={isOpen} close={closeModal} handleIsLoginChange={handleIsLoginChange}
-                            
-                            />
+                            /></span>
                         </div>
                     )
                 }}
@@ -117,39 +82,14 @@ class Nav extends Component {
                 path={`/user/signup`}
                 render={()=>{
                     return(
-                        <div>
+                        <div className="signupNav">
                             <Link to= {`/`}><img className="walkWithUsBtn"src={logo} /></Link>
                         </div>
                     )
                 }}
                 />
-                <Route
-                exact
-                path={`/aboutus`}
-                render={()=>{
-                    return (
-                        <div>
-                            <header className="aboutUs">
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            <span>ABOUT US</span>
-                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                            </header>
-                        </div>
-                    )
-                }}
-                />
-                <Route
-                exact
-                path={`/video/videolist`}
-                render={()=>{
-                    return (
-                    <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        <span>[username] is walking in [country]</span>
-                    </div>
-                    )
-                }}
-                />
+             
+              
             </Switch>
         )   
         }

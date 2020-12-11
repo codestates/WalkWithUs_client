@@ -36,7 +36,7 @@ class SignIn extends Component {
                             &times;
                         </span>
                         <div className="modalContents" >
-                            <h1>Login</h1>
+                            <h1 className="loginName">Login</h1>
                             <form
                   onSubmit={(e) => {
                     e.preventDefault();

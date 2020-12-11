@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./UploadVideo.css";
 import axios from "axios";
-import { withRouter } from "react-router-dom";
+
+import { withRouter,Link } from "react-router-dom";
+import logo from "../image/walkLogoBlack.png"
+
+
 class UploadVideo extends Component {
   constructor(props) {
     super(props);
@@ -30,10 +34,18 @@ class UploadVideo extends Component {
   render() {
     return (
       <div>
+
+      <div>
+      <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
+  </div>
+      <div>
+
         <form onSubmit={this.videoup} encType="multipart/form-data">
           <input type="file" name="userfile" onChange={this.handleInputedit} />
           <input type="submit"></input>
         </form>
+      </div>
+
       </div>
     );
   }
