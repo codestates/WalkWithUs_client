@@ -52,11 +52,11 @@ class SignIn extends Component {
                           this.props.history.push(`/`);
                         })
                         .catch((err) => {
-                          alert("Login failed");
+                          alert("Please check your membership information");
                           console.log(err);
                         });
                     } else {
-                      alert("아이디와 비밀번호를 입력해주세요");
+                      alert("Please fill in both your ID and password");
                     }
                   }}
                 >
