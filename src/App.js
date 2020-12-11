@@ -11,7 +11,8 @@ import axios from "axios";
 import './App.css';
 
 // import logo from './logo.svg';
-
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 
 class App extends React.Component {
     constructor(props) {
@@ -24,10 +25,19 @@ class App extends React.Component {
         };
         this.openModal = this.openModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
+        this.handleNextClick = this.handleNextClick.bind(this)
 
     }
 
+    handleNextClick = async () => {
 
+      await axios
+        .get("http://localhost:3001/video/nextvideo", {})
+        .then((res) => {
+          this.setState({ video: res.data[0] }, ()=> console.log(this.state.video));
+        })
+        .catch((err) => console.log(err));
+    };
 
   openModal = () => {
       this.setState({isModalOpen: true})
@@ -76,6 +86,7 @@ class App extends React.Component {
            <Main
            isLogin = {isLogin}
            userInfo = {userInfo}
+           handleNextClick = {this.handleNextClick}
            />
          ) }
          />
