@@ -7,7 +7,8 @@ import video from "../video/walk.mp4"
 import { Switch } from "@material-ui/core";
 import {GlobalStyle, Wrapper} from "./MainStyle"
 
-
+// const IP_ADDRESS = "52.78.59.129";
+const localhost = "localhost"
 
 class Main extends Component {
     constructor(props){
@@ -15,14 +16,14 @@ class Main extends Component {
         this.state = {};
         this.alertBtn = this.alertBtn.bind(this)
     }
+
     alertBtn = () => {
     alert('Please sign up as a member')
     }
-
-    
+  
 
     render() {
-      const {isLogin} = this.props
+      const {isLogin, handleNextClick} = this.props
       if(isLogin){
         return (
           
@@ -36,7 +37,7 @@ class Main extends Component {
     </div>
             <div className="middleBtn">
             <Link to={`/video/videolist`}>
-            <button className ="walkBtn"><p>walk with us</p></button>
+            <button className ="walkBtn" onClick={handleNextClick}><p>walk with us</p></button>
             </Link>
 
             
@@ -74,7 +75,7 @@ class Main extends Component {
     <Wrapper>
            <div className="middleBtn">
            <Link to={`/video/videolist`}>
-           <button className ="walkBtn"><p>walk with us</p></button>
+           <button className ="walkBtn" ><p>walk with us</p></button>
            </Link>
 
            

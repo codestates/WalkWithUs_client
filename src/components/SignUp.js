@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
 import axios from "axios";
-const IP_ADDRESS = "52.78.59.129";
-// const localhost = localhost
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 class SignUp extends Component {
   constructor(props) {
     super(props);

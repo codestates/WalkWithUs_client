@@ -4,8 +4,8 @@ import "./MyPage.css"
 import axios from "axios";
 import {withRouter} from "react-router-dom"
 
-const IP_ADDRESS = "52.78.59.129";
-// const localhost = localhost
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 const axiosInstance = axios.create({
     withCredentials: true,
   });

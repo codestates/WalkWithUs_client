@@ -4,8 +4,8 @@ import axios from "axios";
 
 import { withRouter,Link } from "react-router-dom";
 import logo from "../image/walkLogoBlack.png"
-const IP_ADDRESS = "52.78.59.129";
-// const localhost = localhost
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 
 class UploadVideo extends Component {
   constructor(props) {
