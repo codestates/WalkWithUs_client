@@ -39,11 +39,13 @@ class SignUp extends Component {
                     })
                     .then((res) => {
                       this.props.history.push(`/`);
-                      alert("가입이 완료되었습니다!");
+                      alert("Membership has been completed!");
                     })
-                    .catch((err) => console.log(err));
+                    .catch((err) =>
+                    alert("You are already a registered member")
+                    );
                 } else {
-                  alert("가입이 완료되지 않았습니다.");
+                  alert("Please fill out all the information");
                 }
               }}
             >
