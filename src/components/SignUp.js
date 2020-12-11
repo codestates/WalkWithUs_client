@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
 import axios from "axios";
-// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "52.78.59.129";
+// const localhost = localhost
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +33,7 @@ class SignUp extends Component {
                 e.preventDefault();
                 if (email && password && username) {
                   axios
-                    .post("http://localhost:3001/user/signup", {
+                    .post(`http://${IP_ADDRESS}:3001/user/signup`, {
                       email: email,
                       password: password,
                       username: username,
