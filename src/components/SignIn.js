@@ -3,7 +3,8 @@ import "./SignIn.css";
 import {Link, withRouter} from "react-router-dom";
 import axios from "axios";
 
-const IP_ADDRESS = "127.0.0.1";
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 const axiosInstance = axios.create({
   withCredentials: false,
 });
@@ -47,16 +48,17 @@ class SignIn extends Component {
                           password: password,
                         })
                         .then((res) => {
-                          console.log(res.data);
+                        
                           handleIsLoginChange(res.data);
                           this.props.history.push(`/`);
+                          
                         })
                         .catch((err) => {
-                          alert("Please check your membership information");
+                          alert("아이디와 비밀번호를 확인해 주세요");
                           console.log(err);
                         });
                     } else {
-                      alert("Please fill in both your ID and password");
+                      alert("아이디와 비밀번호를 모두 입력해 주세요");
                     }
                   }}
                 >

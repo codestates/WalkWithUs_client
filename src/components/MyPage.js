@@ -4,8 +4,8 @@ import "./MyPage.css"
 import axios from "axios";
 import {withRouter} from "react-router-dom"
 
-
-const IP_ADDRESS = "127.0.0.1";
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 const axiosInstance = axios.create({
     withCredentials: true,
   });
@@ -57,12 +57,12 @@ class MyPage extends Component {
                           socialinfo:socialinfo
                           })
                           .then((res) => {
-                            console.log(res);
+                           
                             handleIsLoginChange(JSON.parse(res.config.data))
-                            alert("Member information has been modified.")
+                            alert("회원정보가 수정되었습니다")
                           })
                           .catch((err) => {
-                            alert("Please check your password");
+                            alert("비밀번호를 확인해 주세요");
                             console.log(err);
                           });
                       }}
