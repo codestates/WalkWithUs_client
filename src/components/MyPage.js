@@ -57,7 +57,7 @@ class MyPage extends Component {
                           socialinfo:socialinfo
                           })
                           .then((res) => {
-                            console.log(res);
+                           
                             handleIsLoginChange(JSON.parse(res.config.data))
                             alert("회원정보가 수정되었습니다")
                           })

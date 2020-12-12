@@ -23,8 +23,8 @@ class UploadVideo extends Component {
     await axios
       .post(`http://${IP_ADDRESS}:3001/video/videoup`, formData)
       .then((res) => {
-        console.log("res:", res);
-        alert("The file is successfully uploaded");
+        // console.log("res:", res);
+        alert("파일이 성공적으로 업로드되었습니다!");
         //this.props.history.push(`/`);
       })
       .catch((err) => console.log(err));

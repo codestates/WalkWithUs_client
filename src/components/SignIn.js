@@ -48,7 +48,7 @@ class SignIn extends Component {
                           password: password,
                         })
                         .then((res) => {
-                          console.log(res.data);
+                        
                           handleIsLoginChange(res.data);
                           this.props.history.push(`/`);
                           

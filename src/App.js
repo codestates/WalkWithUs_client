@@ -56,12 +56,12 @@ class App extends React.Component {
 
     
     handleIsLoginChange = (res) => {
-      this.setState({isLogin: true, userInfo: res}, ()=>{console.log(this.state)})
+      this.setState({isLogin: true, userInfo: res})
       sessionStorage.setItem("userInfo",  JSON.stringify(this.state.userInfo))
     }
     handleIsLogoutChange = () => {
       sessionStorage.clear();
-      this.setState({isLogin:false, userInfo: {},isModalOpen: false },()=>{console.log(this.state)})
+      this.setState({isLogin:false, userInfo: {},isModalOpen: false })
       this.props.history.push(`/`);
     }
 
