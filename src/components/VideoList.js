@@ -13,48 +13,47 @@ class VideoList extends Component {
     constructor(props){
         super(props)
         this.state = {
-            video:{}
         };
     }
    
-    componentDidMount(){
-        const {userInfo, isLogin, video} = this.props
-        this.setState({video:video})
-    }
 
 
     render() {
-        const {video, handleNextClick} = this.props
-   
-        return (
-
-            <div>
-                <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        
-                    </div>
-                <div className="videoListBody">
-               <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
+        const {handleNextClick} = this.props
+        const {video} = this.props
         
+            return (
+
+                <div>
+                    <div>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
+                            
+                        </div>
+                    <div className="videoListBody">
+                   <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
+            
+                    </div>
+    
+    
+    
+                   <div className="videoListFooter">
+                      <Link to= {`/video/videoup`}>
+                       <span>Upload your video</span>
+                      </Link>
+                      <button onClick={handleNextClick}>walking around the world</button>
+                      <img className="heart" src={heart}/>
+                      <span>333</span>
+                      <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
+                      <span>Support us</span>
+                      </Link>
+    
+    
+                   </div>
                 </div>
-
-
-
-               <div className="videoListFooter">
-                  <Link to= {`/video/videoup`}>
-                   <span>Upload your video</span>
-                  </Link>
-                  <button onClick={handleNextClick}>walking around the world</button>
-                  <img className="heart" src={heart}/>
-                  <span>333</span>
-                  <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
-                  <span>Support us</span>
-                  </Link>
-
-
-               </div>
-            </div>
-        );
+            );
+        
+        
+      
     }
 }
 
