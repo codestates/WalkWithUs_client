@@ -24,7 +24,8 @@ class VideoList extends Component {
 
 
     render() {
-        const {video} = this.state
+        const {video} = this.props
+   
        
         return (
 
@@ -34,7 +35,7 @@ class VideoList extends Component {
                         
                     </div>
                 <div className="videoListBody">
-               <video style={{width:"100%"}} src={`http://${IP_ADDRESS}:3001/${video.filePath}`} controls/>
+               <video style={{width:"100%"}} src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
                 </div>
 
 
