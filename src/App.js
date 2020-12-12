@@ -34,7 +34,8 @@ class App extends React.Component {
       await axios
         .get("http://localhost:3001/video/nextvideo", {})
         .then((res) => {
-          this.setState({ video: res.data[0] }, ()=> console.log(this.state.video));
+          const random = Math.floor(Math.random() * res.data.length);
+          this.setState({ video: res.data[random] }, ()=> console.log(this.state.video));
         })
         .catch((err) => console.log(err));
     };

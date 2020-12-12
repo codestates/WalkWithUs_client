@@ -35,9 +35,7 @@ class VideoList extends Component {
                     </div>
                 <div className="videoListBody">
                <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
-               
-               
-               
+        
                 </div>
 
 
