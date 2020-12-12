@@ -30,12 +30,13 @@ class App extends React.Component {
     }
 
     handleNextClick = async () => {
-
+     
       await axios
         .get("http://localhost:3001/video/nextvideo", {})
         .then((res) => {
           const random = Math.floor(Math.random() * res.data.length);
           this.setState({ video: res.data[random] });
+          sessionStorage.setItem("video",  JSON.stringify(this.state.video))
         })
         .catch((err) => console.log(err));
     };
@@ -51,6 +52,10 @@ class App extends React.Component {
       const userInfo = sessionStorage.getItem('userInfo')
       if(userInfo){
         this.setState({isLogin: true, userInfo: JSON.parse(userInfo)})
+      }
+      const video = sessionStorage.getItem('video')
+      if(video){
+        this.setState({video:JSON.parse(video)})
       }
     }
 
