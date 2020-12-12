@@ -35,7 +35,7 @@ class App extends React.Component {
         .get("http://localhost:3001/video/nextvideo", {})
         .then((res) => {
           const random = Math.floor(Math.random() * res.data.length);
-          this.setState({ video: res.data[random] }, ()=> console.log(this.state.video));
+          this.setState({ video: res.data[random] });
         })
         .catch((err) => console.log(err));
     };
@@ -114,7 +114,7 @@ class App extends React.Component {
          <Route
          exact
          path={`/video/videolist`}
-         render={()=><VideoList isLogin = {isLogin} userInfo ={userInfo} video = {video}/>}
+         render={()=><VideoList isLogin = {isLogin} userInfo ={userInfo} video = {video} handleNextClick={this.handleNextClick}/>}
            />
          
        </Switch>

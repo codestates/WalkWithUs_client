@@ -24,7 +24,7 @@ class VideoList extends Component {
 
 
     render() {
-        const {video} = this.props
+        const {video, handleNextClick} = this.props
    
         return (
 
@@ -44,7 +44,7 @@ class VideoList extends Component {
                   <Link to= {`/video/videoup`}>
                    <span>Upload your video</span>
                   </Link>
-                  <button>walking around the world</button>
+                  <button onClick={handleNextClick}>walking around the world</button>
                   <img className="heart" src={heart}/>
                   <span>333</span>
                   <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
