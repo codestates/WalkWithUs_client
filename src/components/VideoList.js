@@ -26,7 +26,6 @@ class VideoList extends Component {
     render() {
         const {video} = this.props
    
-       
         return (
 
             <div>
@@ -35,7 +34,10 @@ class VideoList extends Component {
                         
                     </div>
                 <div className="videoListBody">
-               <video style={{width:"100%"}} src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
+               <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
+               
+               
+               
                 </div>
 
 
