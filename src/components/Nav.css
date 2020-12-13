@@ -1,42 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 .walkWithUsBtn {
-  width: 100px;
-  height: 100px;
-  margin-top: 70px;
-  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  margin-top: 60px;
+  margin-left: 5px;
 }
 
 .aboutUsNav {
   text-decoration: none;
   color: black;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Serif;
 }
 
 .myPageNav {
   text-decoration: none;
   color: black;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Serif;
 }
 .logOut {
   color: black;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Serif;
   top: 0px;
   right: 0px;
 }
 .logIn {
   color: black;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Serif;
 }
 .loginMainNav {
   margin-top: -50px;
-  font-size: 33px;
+  font-size: 20px;
   z-index: 10;
   position: absolute;
 }
 
 .loginMypageNav {
-  font-size: 33px;
+  font-size: 20px;
   z-index: 10;
   position: fixed;
 
@@ -44,12 +44,12 @@
 }
 .logOutMainNav {
   margin-top: -50px;
-  font-size: 33px;
+  font-size: 20px;
   z-index: 10;
   position: absolute;
 }
 .signupNav {
-  font-size: 33px;
+  font-size: 20px;
   z-index: 10;
   position: fixed;
   top: -50px;

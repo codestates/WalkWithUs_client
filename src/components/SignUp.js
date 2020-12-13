@@ -24,7 +24,7 @@ class SignUp extends Component {
       return (
         <div>
           <center>
-            <h1>Sign up</h1>
+            <h1 className="signup">Sign up</h1>
             <br />
             <br />
             <form
@@ -42,7 +42,7 @@ class SignUp extends Component {
                       alert("Membership has been completed!");
                     })
                     .catch((err) =>
-                    alert("You are already a registered member")
+                      alert("You are already a registered member")
                     );
                 } else {
                   alert("Please fill out all the information");
@@ -64,8 +64,10 @@ class SignUp extends Component {
                 placeholder="What is your username?"
                 onChange={this.handleInputValue("username")}
               ></input>
-              <button type="submit">Submit</button>
-              <h2>welcome to walk with us!</h2>
+              <button type="submit" className="submit">
+                Submit
+              </button>
+              <h2 className="welcome">welcome to walk with us!</h2>
             </form>
           </center>
         </div>
