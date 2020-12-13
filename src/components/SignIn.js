@@ -54,7 +54,7 @@ class SignIn extends Component {
                           
                         })
                         .catch((err) => {
-                          alert("아이디와 비밀번호를 확인해 주세요");
+                          alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다");
                           console.log(err);
                         });
                     } else {
