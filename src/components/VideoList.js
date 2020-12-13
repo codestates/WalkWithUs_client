@@ -22,13 +22,14 @@ class VideoList extends Component {
 
     render() {
         const {handleNextClick} = this.props
-        const {isLogin, video} = this.props
+        const {isLogin, video, userInfo} = this.props
         if(isLogin){
             return (
 
                 <div>
                     <GlobalStyle />
                             <Link to= {`/`}><img className="walkWithUsListBtn" src={logo}/></Link>
+            <span className="walkingUser">{userInfo.username}&nbsp; is walking with us</span>
             
                     <div className="videoListBody">
                    <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
