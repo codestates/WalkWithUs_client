@@ -11,7 +11,8 @@ import axios from "axios";
 import './App.css';
 
 // import logo from './logo.svg';
-
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 
 class App extends React.Component {
     constructor(props) {
@@ -24,10 +25,21 @@ class App extends React.Component {
         };
         this.openModal = this.openModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
+        this.handleNextClick = this.handleNextClick.bind(this)
 
     }
 
-
+    handleNextClick = async () => {
+     
+      await axios
+        .get("http://localhost:3001/video/nextvideo", {})
+        .then((res) => {
+          const random = Math.floor(Math.random() * res.data.length);
+          this.setState({ video: res.data[random] });
+          sessionStorage.setItem("video",  JSON.stringify(this.state.video))
+        })
+        .catch((err) => console.log(err));
+    };
 
   openModal = () => {
       this.setState({isModalOpen: true})
@@ -41,16 +53,20 @@ class App extends React.Component {
       if(userInfo){
         this.setState({isLogin: true, userInfo: JSON.parse(userInfo)})
       }
+      const video = sessionStorage.getItem('video')
+      if(video){
+        this.setState({video:JSON.parse(video)})
+      }
     }
 
     
     handleIsLoginChange = (res) => {
-      this.setState({isLogin: true, userInfo: res}, ()=>{console.log(this.state)})
+      this.setState({isLogin: true, userInfo: res})
       sessionStorage.setItem("userInfo",  JSON.stringify(this.state.userInfo))
     }
     handleIsLogoutChange = () => {
       sessionStorage.clear();
-      this.setState({isLogin:false, userInfo: {},isModalOpen: false },()=>{console.log(this.state)})
+      this.setState({isLogin:false, userInfo: {},isModalOpen: false })
       this.props.history.push(`/`);
     }
 
@@ -76,6 +92,7 @@ class App extends React.Component {
            <Main
            isLogin = {isLogin}
            userInfo = {userInfo}
+           handleNextClick = {this.handleNextClick}
            />
          ) }
          />
@@ -102,7 +119,7 @@ class App extends React.Component {
          <Route
          exact
          path={`/video/videolist`}
-         render={()=><VideoList isLogin = {isLogin} userInfo ={userInfo} video = {video}/>}
+         render={()=><VideoList isLogin = {isLogin} userInfo ={userInfo} video = {video} handleNextClick={this.handleNextClick}/>}
            />
          
        </Switch>

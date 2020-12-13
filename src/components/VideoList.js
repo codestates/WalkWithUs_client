@@ -6,43 +6,54 @@ import axios from "axios";
 import heart from "../image/heart.png"
 import logo from "../image/walkLogoBlack.png"
 
-
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 
 class VideoList extends Component {
     constructor(props){
         super(props)
-        this.state = {};
+        this.state = {
+        };
     }
+   
+
+
     render() {
-        const {userInfo, isLogin} = this.props
-        return (
+        const {handleNextClick} = this.props
+        const {video} = this.props
+        
+            return (
 
-            <div>
                 <div>
-                        <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-                        <span>[username] is walking in [country]</span>
+                    <div>
+                            <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
+                            
+                        </div>
+                    <div className="videoListBody">
+                   <video style={{width:"100%"}} autoPlay="autoPlay" src={`http://${IP_ADDRESS}:3001/${video.fileName}`} controls/>
+            
                     </div>
-                <div className="videoListBody">
-                <img src={"https://ifh.cc/g/WK91e6.jpg"}/>
+    
+    
+    
+                   <div className="videoListFooter">
+                      <Link to= {`/video/videoup`}>
+                       <span>Upload your video</span>
+                      </Link>
+                      <button onClick={handleNextClick}>walking around the world</button>
+                      <img className="heart" src={heart}/>
+                      <span>333</span>
+                      <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
+                      <span>Support us</span>
+                      </Link>
+    
+    
+                   </div>
                 </div>
-
-
-
-               <div className="videoListFooter">
-                  <Link to= {`/video/videoup`}>
-                   <span>Upload your video</span>
-                  </Link>
-                  <button>walking around the world</button>
-                  <img className="heart" src={heart}/>
-                  <span>333</span>
-                  <Link to ={{pathname: "https://www.buymeacoffee.com/walkwithus3"}} target="_blank">
-                  <span>Support us</span>
-                  </Link>
-
-
-               </div>
-            </div>
-        );
+            );
+        
+        
+      
     }
 }
 

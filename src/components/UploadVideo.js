@@ -4,7 +4,8 @@ import axios from "axios";
 
 import { withRouter,Link } from "react-router-dom";
 import logo from "../image/walkLogoBlack.png"
-
+// const IP_ADDRESS = "52.78.59.129";
+const IP_ADDRESS = "localhost"
 
 class UploadVideo extends Component {
   constructor(props) {
@@ -20,10 +21,10 @@ class UploadVideo extends Component {
     const formData = new FormData();
     formData.append("userfile", this.state.selectedFile);
     await axios
-      .post("http://localhost:3001/video/videoup", formData)
+      .post(`http://${IP_ADDRESS}:3001/video/videoup`, formData)
       .then((res) => {
-        console.log("res:", res);
-        alert("The file is successfully uploaded");
+        // console.log("res:", res);
+        alert("파일이 성공적으로 업로드되었습니다!");
         //this.props.history.push(`/`);
       })
       .catch((err) => console.log(err));
