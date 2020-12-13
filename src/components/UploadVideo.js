@@ -20,14 +20,19 @@ class UploadVideo extends Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("userfile", this.state.selectedFile);
-    await axios
+    if((this.state.selectedFile.size > 31457280) || this.state.selectedFile.type !== "video/mp4"){
+      alert("파일의 용량은 30MB 이상일 수 없으며\n동영상은 mp4 형식만 지원합니다")
+    }
+    else{await axios
       .post(`http://${IP_ADDRESS}:3001/video/videoup`, formData)
       .then((res) => {
         // console.log("res:", res);
         alert("파일이 성공적으로 업로드되었습니다!");
         //this.props.history.push(`/`);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert("파일 업로드에 실패하였습니다")) }
+    // console.log(this.state.selectedFile.size)
+    // console.log(this.state.selectedFile.type)
   };
   handleInputedit = (e) => {
     this.setState({ selectedFile: e.target.files[0] });
