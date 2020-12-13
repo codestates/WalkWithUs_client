@@ -37,6 +37,8 @@ class SignIn extends Component {
                             &times;
                         </span>
                         <div className="modalContents" >
+                        
+                          <br/>
                             <h1 className="loginName">Login</h1>
                             <form
                   onSubmit={(e) => {
@@ -62,6 +64,8 @@ class SignIn extends Component {
                     }
                   }}
                 >
+                
+                  <br/>
                             <div>
                             <input
                             name="email"
@@ -78,15 +82,19 @@ class SignIn extends Component {
                             onChange={this.handleInputValue("password")}
                             />
                             </div>
+                            <br/>
+                            <br/>
+                            <br/>
                             <button className="loginBtn" type="submit">
                                 {" "}Login{" "}
                             </button>
                             </form>
                             <Link to="/user/signup">
-                            <button className="signUpBtn">
-                                 Signup 
+                            <button type="button" className="signUpBtn">
+                            {" "}Signup {" "} 
                             </button>
                             </Link>
+                            
                         </div>
                     </div>
                 </div>
