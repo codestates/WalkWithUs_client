@@ -1,40 +1,45 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./MyPage.css"
+import "./MyPage.css";
 import axios from "axios";
-import {withRouter} from "react-router-dom"
+
+import { withRouter } from "react-router-dom";
+
+const IP_ADDRESS = "127.0.0.1";
+
+
 
 // const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost"
-const axiosInstance = axios.create({
-    withCredentials: true,
-  });
 
+
+const axiosInstance = axios.create({
+  withCredentials: true,
+});
 
 class MyPage extends Component {
-    constructor(props){
-        super(props)
-        this.state = 
-        {email:this.props.userInfo.email,
-        username:this.props.userInfo.username,
-        password: "",
-        socialinfo:this.props.userInfo.socialinfo
-        }
-        this.handleInputValue = this.handleInputValue.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: this.props.userInfo.email,
+      username: this.props.userInfo.username,
+      password: "",
+      socialinfo: this.props.userInfo.socialinfo,
+    };
+    this.handleInputValue = this.handleInputValue.bind(this);
+  }
 
+  componentDidMount() {
+    const userInfo = sessionStorage.getItem("userInfo");
+    if (userInfo) {
+      this.setState({
+        email: JSON.parse(userInfo).email,
+        username: JSON.parse(userInfo).username,
 
-    componentDidMount(){
-      const userInfo = sessionStorage.getItem('userInfo')
-      if(userInfo){
-        this.setState({email: JSON.parse(userInfo).email,
-                      username:JSON.parse(userInfo).username,
-                      
-                      socialinfo: JSON.parse(userInfo).socialinfo
-                    })
-      }
+        socialinfo: JSON.parse(userInfo).socialinfo,
+      });
     }
-    
+  }
+
 
     handleInputValue = (key) => (e) => {
         this.setState({ [key]: e.target.value });
@@ -67,42 +72,47 @@ class MyPage extends Component {
                           });
                       }}
                     >
+
             <div className="inputText">
-            <div className ="email">
-                    <div className ="email">{email}</div>
-            </div>
-            <div className ="input">
-            <input type="username" value={`${username}`}
-            placeholder="enter your username"
-            onChange={this.handleInputValue("username")}
-            ></input>
-            </div>
-            
-            
-            <div className ="input">
-            <input type="text"  value={socialinfo?socialinfo:``} placeholder="enter your social info"
-            onChange={this.handleInputValue("socialinfo")}
-            ></input>
-            </div>
-            <div className ="input">
-            <input type="password" placeholder="enter your own password" onChange={this.handleInputValue("password")}>
-            
-            </input>
+              <div className="email">
+                <div className="email">{email}</div>
+              </div>
+              <div className="input">
+                <input
+                  type="username"
+                  value={`${username}`}
+                  placeholder="enter your username"
+                  onChange={this.handleInputValue("username")}
+                ></input>
+              </div>
+
+              <div className="input">
+                <input
+                  type="text"
+                  value={socialinfo ? socialinfo : ``}
+                  placeholder="enter your social info"
+                  onChange={this.handleInputValue("socialinfo")}
+                ></input>
+              </div>
+              <div className="input">
+                <input
+                  type="password"
+                  placeholder="enter your own password"
+                  onChange={this.handleInputValue("password")}
+                ></input>
+              </div>
             </div>
 
-
-            </div>
-                
-            <button type="submit">Edit</button>
-            </form>
-                </div>
-            );
-
-        }else{
-            return <div></div>
-        }
-        
+            <button type="submit" className="edit">
+              Edit
+            </button>
+          </form>
+        </div>
+      );
+    } else {
+      return <div></div>;
     }
+  }
 }
 
 export default withRouter(MyPage);

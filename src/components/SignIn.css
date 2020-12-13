@@ -72,9 +72,14 @@ input::placeholder {
   margin-bottom: 12px;
   border-radius: 3px;
   border-style: none;
+  font-family: "Times New Roman", Serif;
 }
 .loginName {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 40px;
+  font-family: "Times New Roman", Serif;
+}
+.signUpBtn {
+  font-family: "Times New Roman", Serif;
 }

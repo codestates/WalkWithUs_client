@@ -26,7 +26,7 @@ class SignUp extends Component {
       return (
         <div>
           <center>
-            <h1>Sign up</h1>
+            <h1 className="signup">Sign up</h1>
             <br />
             <br />
             <form
@@ -44,7 +44,9 @@ class SignUp extends Component {
                       alert("회원가입이 완료되었습니다!");
                     })
                     .catch((err) =>
-                    alert("이미 등록된 회원입니다")
+
+                      alert("You are already a registered member")
+
                     );
                 } else {
                   alert("회원정보를 모두 입력해 주세요");
@@ -66,8 +68,10 @@ class SignUp extends Component {
                 placeholder="What is your username?"
                 onChange={this.handleInputValue("username")}
               ></input>
-              <button type="submit">Submit</button>
-              <h2>welcome to walk with us!</h2>
+              <button type="submit" className="submit">
+                Submit
+              </button>
+              <h2 className="welcome">welcome to walk with us!</h2>
             </form>
           </center>
         </div>
