@@ -38,15 +38,14 @@ body {
   vertical-align: middle;
   color: white;
   font-family: "Times New Roman", Serif;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .uploadClick {
   position: fixed;
-  top: 61%;
+  top: 62%;
   left: 50%;
   margin-left: -136px;
-  margin-top: 30px;
   width: 400px;
   color: white;
   font-size: 25px;
