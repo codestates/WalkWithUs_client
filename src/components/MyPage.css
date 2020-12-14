@@ -3,4 +3,57 @@
 }
 .mypage {
   font-family: "Times New Roman", Serif;
+  text-align: center;
+}
+.email {
+  top: 45px;
+  text-align: center;
+}
+.username {
+  top: 55px;
+  text-align: center;
+}
+.socialinfo {
+  top: 65px;
+  text-align: center;
+}
+.password {
+  top: 75px;
+  text-align: center;
+}
+.editbtn {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  line-height: 1px;
+  margin-top: 185px;
+  margin-left: 585px;
+  border-radius: 5px;
+  border-style: none;
+  font-family: "Times New Roman", Serif;
+  font-size: 17px;
+}
+.backgroundimg {
+  font-size: 20px;
+  z-index: -1;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+}
+.textall {
+  position: fixed;
+  top: 5%;
+  left: 51.5%;
+  width: 700px;
+  height: 90px;
+  font-family: "Times New Roman", Serif;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: -370px;
+  text-align: center;
+  z-index: 2;
 }
