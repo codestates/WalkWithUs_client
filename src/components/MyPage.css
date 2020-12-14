@@ -19,6 +19,7 @@
 }
 .password {
   top: 75px;
+
   text-align: center;
 }
 .editbtn {
@@ -28,7 +29,9 @@
   background-color: black;
   color: white;
   line-height: 1px;
+
   margin-top: 185px;
+
   margin-left: 585px;
   border-radius: 5px;
   border-style: none;

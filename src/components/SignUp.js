@@ -44,8 +44,7 @@ class SignUp extends Component {
                       alert("회원가입이 완료되었습니다!");
                     })
                     .catch((err) =>
-
-                      alert("You are already a registered member")
+                      alert("회원가입이 완료되지 않았습니다")
 
                     );
                 } else {
