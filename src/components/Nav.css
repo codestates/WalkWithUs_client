@@ -21,8 +21,11 @@
 .logOut {
   color: black;
   font-family: "Times New Roman", Serif;
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  z-index: 10;
+  position: fixed;
 }
 .logIn {
   color: black;
