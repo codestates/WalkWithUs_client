@@ -2,11 +2,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./MyPage.css";
 import axios from "axios";
-import { withRouter } from "react-router-dom";
+
 import TextField from "@material-ui/core/TextField";
+import { withRouter } from "react-router-dom";
 import backgroundimg from "../image/backgroundimg.jpg";
-//const IP_ADDRESS = "127.0.0.1";
-const IP_ADDRESS = "52.78.59.129";
+
+const IP_ADDRESS = "127.0.0.1";
+
+// const IP_ADDRESS = "52.78.59.129";
+
+
 const axiosInstance = axios.create({
   withCredentials: true,
 });
@@ -31,6 +36,7 @@ class MyPage extends Component {
       });
     }
   }
+
   handleInputValue = (key) => (e) => {
     this.setState({ [key]: e.target.value });
   };
@@ -40,12 +46,19 @@ class MyPage extends Component {
     if (isLogin) {
       return (
         <div className="mypageContainer">
+
+          <div>
+            <img className="backgroundimg" src={backgroundimg}></img>
+          </div>
+
           <h1 className="mypage">My page</h1>
           <form
             onSubmit={(e) => {
               e.preventDefault();
               return axios
-                .put(`https://${IP_ADDRESS}:3001/user/useredit`, {
+
+                .put(`http://${IP_ADDRESS}:3001/user/useredit`, {
+
                   email: email,
                   username: username,
                   password: password,
@@ -61,65 +74,46 @@ class MyPage extends Component {
                 });
             }}
           >
-            <div>
-              <img className="backgroundimg" src={backgroundimg}></img>
-            </div>
+
             <div className="textall">
-              <p>
-                <TextField
-                  className="email"
-                  input
-                  placeholder={
-                    this.props.userInfo.email
-                      ? this.props.userInfo.email
-                      : "닉네임을 입력하세요"
-                  }
-                  onChange={this.handleInputValue("email")}
-                ></TextField>
-              </p>
-              <p>
+              <div className="">
+                <TextField className="email" value={`${email}`}></TextField>
+              </div>
+              <div>
                 <TextField
                   className="username"
-                  input
-                  placeholder={
-                    this.props.userInfo.username
-                      ? this.props.userInfo.username
-                      : "사용자 이름을 입력하세요"
-                  }
+                  type="username"
+                  value={`${username}`}
+                  placeholder="닉네임을 입력하세요"
                   onChange={this.handleInputValue("username")}
                 ></TextField>
-              </p>
+              </div>
+
               <div>
                 <TextField
                   className="socialinfo"
-                  input
-                  placeholder={
-                    this.props.userInfo.socialinfo
-                      ? this.props.userInfo.socialinfo
-                      : "소셜 계정을 추가하세요"
-                  }
+                  type="text"
+                  value={socialinfo ? socialinfo : ``}
+                  placeholder="소셜 정보를 입력하세요"
                   onChange={this.handleInputValue("socialinfo")}
                 ></TextField>
               </div>
-              <p>
+              <div>
                 <TextField
                   className="password"
-                  input
+
                   type="password"
                   placeholder="비밀번호를 입력하세요"
                   onChange={this.handleInputValue("password")}
                 ></TextField>
-              </p>
+
+              </div>
             </div>
-            <div>
-              <button
-                className="editbtn"
-                type="submit"
-                onClick={this.editUserInfo}
-              >
-                Edit
-              </button>
-            </div>
+
+            <button type="submit" className="editbtn">
+              Edit
+            </button>
+
           </form>
         </div>
       );
