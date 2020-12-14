@@ -34,7 +34,7 @@ class Nav extends Component {
                       <span className="myPage">MyPage</span>
                     </Link>
                     &nbsp;&nbsp;&nbsp;
-                    <span className="logOut" onClick={handleIsLogoutChange}>
+                    <span className="mainlogOut" onClick={handleIsLogoutChange}>
                       Logout
                     </span>{" "}
                   </span>
