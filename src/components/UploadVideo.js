@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./UploadVideo.css";
 import axios from "axios";
-
 import { withRouter,Link } from "react-router-dom";
-import logo from "../image/walkLogoBlack.png"
+import logo from "../image/walkLogoWhite.png"
+import backgroundimgUp from "../image/backgroundimgUp.jpg"
+import {GlobalStyle} from "./MainStyle";
+
 // const IP_ADDRESS = "52.78.59.129";
 const IP_ADDRESS = "localhost"
 
@@ -20,7 +22,11 @@ class UploadVideo extends Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("userfile", this.state.selectedFile);
-    if((this.state.selectedFile.size > 31457280) || this.state.selectedFile.type !== "video/mp4"){
+    
+    if(this.state.selectedFile === null || this.state.selectedFile === undefined){
+     alert("파일을 올려주세요") 
+    }
+    else if((this.state.selectedFile.size > 31457280) || this.state.selectedFile.type !== "video/mp4"){
       alert("파일의 용량은 30MB 이상일 수 없으며\n동영상은 mp4 형식만 지원합니다")
     }
     else{await axios
@@ -40,15 +46,22 @@ class UploadVideo extends Component {
   render() {
     return (
       <div>
+        <GlobalStyle />
 
       <div>
-      <Link to= {`/`}><img className="walkWithUsBtn" src={logo}/></Link>
-  </div>
+      <Link to= {`/`} className="logoBtn"><img className="walkWithUsBtn" src={logo}/></Link>
+      </div>
+          <div>
+            <img className="backgroundimgUp" src={backgroundimgUp}></img>
+          </div>
+      <h1 className = "uploadVideoTitle">Upload your Footprint</h1>
       <div>
+        <p className="caution1">Limit 30mb</p>
+        <p className="caution2">Format video mp4 only</p>
 
-        <form onSubmit={this.videoup} encType="multipart/form-data">
-          <input type="file" name="userfile" onChange={this.handleInputedit} />
-          <input type="submit"></input>
+        <form  onSubmit={this.videoup} encType="multipart/form-data">
+          <input className="uploadFileForm" type="file" name="userfile" onChange={this.handleInputedit} />
+          <input className="submitBtn" type="submit"></input>
         </form>
       </div>
 
