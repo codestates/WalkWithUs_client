@@ -33,6 +33,12 @@ body {
   text-align: center;
   z-index: 0;
 }
+
+.walkBtn:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
 .walkBtn p {
   text-align: center;
   vertical-align: middle;
@@ -51,6 +57,9 @@ body {
   font-size: 25px;
   font-family: "Times New Roman", Serif;
   z-index: 0;
+}
+.uploadClick:hover {
+  opacity: 0.8;
 }
 
 .instagramLink {

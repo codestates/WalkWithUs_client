@@ -58,6 +58,11 @@
   font-family: "Times New Roman", Serif;
   font-size: 40px;
 }
+
+.walkingAroundBtn:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
 .walkingUser {
   position: absolute;
   margin-top: 20px;
