@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+.logoBtn {
+  position: fixed;
+  top: -50px;
+}
+.uploadFileForm {
+  position: fixed;
+  top: 95%;
+  left: 49%;
+  margin-left: -170px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  line-height: 1px;
+  border-radius: 5px;
+  border-style: none;
+  width: 310px;
+  font-family: "Times New Roman", Serif;
+}
+.submitBtn {
+  position: fixed;
+  top: 95%;
+  left: 54.5%;
+  width: 80px;
+  height: 46px;
+  margin-left: 70px;
+  background-color: rgb(246, 76, 84);
+  color: white;
+  border-radius: 4px;
+  border-color: rgb(246, 76, 84);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+.submitBtn:hover {
+  opacity: 0.9;
+}
+.uploadVideoTitle {
+  position: fixed;
+  top: 6%;
+  left: 51%;
+  margin-left: -180px;
+  font-size: 40px;
+  color: white;
+  font-family: "Times New Roman", Serif;
+}
+.backgroundimgUp {
+  font-size: 20px;
+  z-index: -1;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+}
+.caution {
+  position: fixed;
+  font-family: "Times New Roman", Serif;
+  font-size: 18px;
+  right: 0px;
+  bottom: 0.5%;
+  left: 42.5%;
+  margin-right: 23px;
+}
