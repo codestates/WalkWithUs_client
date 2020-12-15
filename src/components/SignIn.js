@@ -3,8 +3,12 @@ import "./SignIn.css";
 import {Link, withRouter} from "react-router-dom";
 import axios from "axios";
 
+
+const IP_ADDRESS = "127.0.0.1";
 // const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost"
+
+
+
 const axiosInstance = axios.create({
   withCredentials: false,
 });

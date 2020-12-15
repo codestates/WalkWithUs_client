@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./AboutUs.css";
-import axios from "axios";
 import { withRouter } from "react-router-dom";
 import Introduce from "./introduce";
 import ShareStory from "./shareYourStory";
 import logo from "../image/walkLogoBlack.png";
 import walkingtext from "../image/walkingtext.png";
 import walkingtext2 from "../image/walkingtext2.png";
+
+
 
 class AboutUs extends Component {
   constructor(props) {

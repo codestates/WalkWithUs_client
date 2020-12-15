@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./MyPage.css";
 import axios from "axios";
-
 import TextField from "@material-ui/core/TextField";
 import { withRouter } from "react-router-dom";
 import backgroundimg from "../image/backgroundimg.jpg";
 
-const IP_ADDRESS = "127.0.0.1";
 
+const IP_ADDRESS = "127.0.0.1";
 // const IP_ADDRESS = "52.78.59.129";
+
 
 
 const axiosInstance = axios.create({

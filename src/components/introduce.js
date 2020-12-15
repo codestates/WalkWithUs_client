@@ -50,8 +50,8 @@ export default function NestedGrid() {
               &middot; Email: sejongbgy07@gmail.com<br/>
               <br/>
               안녕하세요 박권용 입니다.<br/>
-저의 기술로 세상에 조금이나마<br/>
-도움이 되고 싶습니다.
+              저의 기술로 세상에 조금이나마<br/>
+              도움이 되고 싶습니다.
             </p>
           </Paper>
         </Grid>
@@ -62,12 +62,12 @@ export default function NestedGrid() {
           Jihee Yoon <br/><br/>
             
               &middot; Full-stack, Translate, Design
- <br/>
+              <br/>
               &middot; Email: yjhe333@gmail.com<br/>
               <br/>
               안녕하세요 윤지희 입니다.<br/>
 
-저는 사람들을 돕고 성장하는<br/> 개발자가 되고 싶습니다.
+              저는 사람들을 돕고 성장하는<br/> 개발자가 되고 싶습니다.
 
 
             </p>

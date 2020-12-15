@@ -1,6 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
-
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
@@ -16,10 +14,6 @@ const GlobalStyle = createGlobalStyle`
         background: black;
         background-size:cover;
     }
-`;
-const Wrapper = styled.section`
-
- 
 `;
 
 

@@ -4,6 +4,8 @@ import SignIn from "./SignIn";
 import logo from "../image/walkLogoBlack.png";
 import "./Nav.css";
 
+
+
 class Nav extends Component {
   constructor(props) {
     super(props);
