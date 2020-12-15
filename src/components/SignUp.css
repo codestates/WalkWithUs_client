@@ -1,9 +1,39 @@
 .signup {
   font-family: "Times New Roman", Serif;
+  color: black;
+  margin-top: 21%;
+  margin-left: 7.4%;
 }
-.welcome {
+
+.submit2 {
   font-family: "Times New Roman", Serif;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  line-height: 1px;
+  margin-top: 3%;
+  margin-left: 7.7%;
+  border-radius: 5px;
+  border-style: none;
+  font-family: "Times New Roman", Serif;
+  font-size: 17px;
+  z-index: 0;
+  right: 50%;
 }
-.submit {
-  font-family: "Times New Roman", Serif;
+
+.alltext {
+  margin-left: 5.2%;
+}
+.backgroundimg2 {
+  font-size: 20px;
+  z-index: -1;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+}
+
+.signupcontainer {
+  max-width: 1023px;
 }
