@@ -1,14 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
-
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
    
-   
-    body{
-       
+    body{    
         font-size: 1rem;
 		color:#fff;
         width:100%;

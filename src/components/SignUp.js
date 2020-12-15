@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
 import axios from "axios";
 import backgroundimg2 from "../image/backgroundimg2.jpg";
-import { GlobalStyle, Wrapper } from "./MainStyle";
 import TextField from "@material-ui/core/TextField";
-// import backgroundimg2 from "../image/backgroundimg2.jpg";
+
+
+const IP_ADDRESS = "127.0.0.1";
 // const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost";
+
+
 
 class SignUp extends Component {
   constructor(props) {

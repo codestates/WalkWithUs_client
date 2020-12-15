@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
-import axios from "axios";
 import "./Main.css";
 import video from "../video/walk.mp4";
-import { Switch } from "@material-ui/core";
-import { GlobalStyle, Wrapper } from "./MainStyle";
+import { GlobalStyle } from "./MainStyle";
+
+
 
 class Main extends Component {
 
@@ -16,7 +15,7 @@ class Main extends Component {
     }
 
     alertBtn = () => {
-    alert('Please sign up as a member')
+    alert('회원가입을 하셔야 동영상을 올릴 수 있습니다')
     }
   
 
@@ -79,8 +78,6 @@ class Main extends Component {
               </video>
             </div>
 
-
-    <Wrapper>
            <div className="middleBtn">
            <Link to={`/video/videolist`}>
            <button className ="walkBtn"  onClick={handleNextClick}><p>walk with us</p></button>
@@ -91,7 +88,7 @@ class Main extends Component {
                   <p>upload your video here</p>
                 </div>
               </div>
-            </Wrapper>
+          
           </div>
 
           <div className="mainFooter">

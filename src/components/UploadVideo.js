@@ -6,8 +6,11 @@ import logo from "../image/walkLogoWhite.png"
 import backgroundimgUp from "../image/backgroundimgUp.jpg"
 import {GlobalStyle} from "./MainStyle";
 
+
+const IP_ADDRESS = "127.0.0.1";
 // const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost"
+
+
 
 class UploadVideo extends Component {
   constructor(props) {
