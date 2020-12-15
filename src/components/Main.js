@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import "./Main.css";
 import video from "../video/walk.mp4";
 import { GlobalStyle } from "./MainStyle";
+import swal from 'sweetalert';
 
 
 
@@ -15,7 +16,7 @@ class Main extends Component {
     }
 
     alertBtn = () => {
-    alert('회원가입을 하셔야 동영상을 올릴 수 있습니다')
+      swal('회원가입을 하셔야 동영상을 올릴 수 있습니다')
     }
   
 
