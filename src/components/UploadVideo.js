@@ -48,7 +48,7 @@ class UploadVideo extends Component {
       <div>
         <GlobalStyle />
 
-      <div>
+      <div className ="uploadVideoWrapper">
       <Link to= {`/`} className="logoBtn"><img className="walkWithUsBtn" src={logo}/></Link>
       </div>
           <div>
@@ -56,8 +56,8 @@ class UploadVideo extends Component {
           </div>
       <h1 className = "uploadVideoTitle">Upload your Footprint</h1>
       <div>
-        <p className="caution1">Limit 30mb</p>
-        <p className="caution2">Format video mp4 only</p>
+        <p className="caution">Limit 30MB & Video mp4 only</p>
+        
 
         <form  onSubmit={this.videoup} encType="multipart/form-data">
           <input className="uploadFileForm" type="file" name="userfile" onChange={this.handleInputedit} />
