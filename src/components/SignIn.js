@@ -37,6 +37,8 @@ class SignIn extends Component {
                             &times;
                         </span>
                         <div className="modalContents" >
+                        
+                          <br/>
                             <h1 className="loginName">Login</h1>
                             <form
                   onSubmit={(e) => {
@@ -54,7 +56,7 @@ class SignIn extends Component {
                           
                         })
                         .catch((err) => {
-                          alert("아이디와 비밀번호를 확인해 주세요");
+                          alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다");
                           console.log(err);
                         });
                     } else {
@@ -62,6 +64,8 @@ class SignIn extends Component {
                     }
                   }}
                 >
+                
+                  <br/>
                             <div>
                             <input
                             name="email"
@@ -78,15 +82,19 @@ class SignIn extends Component {
                             onChange={this.handleInputValue("password")}
                             />
                             </div>
+                            <br/>
+                            <br/>
+                            <br/>
                             <button className="loginBtn" type="submit">
                                 {" "}Login{" "}
                             </button>
                             </form>
                             <Link to="/user/signup">
-                            <button className="signUpBtn">
-                                 Signup 
+                            <button type="button" className="signUpBtn">
+                            {" "}Signup {" "} 
                             </button>
                             </Link>
+                            
                         </div>
                     </div>
                 </div>

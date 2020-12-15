@@ -21,8 +21,8 @@
 .logOut {
   color: black;
   font-family: "Times New Roman", Serif;
-  top: 10px;
-  right: 20px;
+  top: 15px;
+  right: 30px;
   font-size: 20px;
   z-index: 10;
   position: fixed;
@@ -42,7 +42,6 @@
   font-size: 20px;
   z-index: 10;
   position: fixed;
-
   top: -50px;
 }
 .logOutMainNav {
@@ -66,4 +65,8 @@
   position: fixed;
   right: 40px;
   top: 30px;
+}
+.mainlogOut {
+  color: black;
+  font-family: "Times New Roman", Serif;
 }

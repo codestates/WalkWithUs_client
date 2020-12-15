@@ -32,7 +32,7 @@ class App extends React.Component {
     handleNextClick = async () => {
      
       await axios
-        .get("http://localhost:3001/video/nextvideo", {})
+        .get(`http://${IP_ADDRESS}:3001/video/nextvideo`, {})
         .then((res) => {
           const random = Math.floor(Math.random() * res.data.length);
           this.setState({ video: res.data[random] });

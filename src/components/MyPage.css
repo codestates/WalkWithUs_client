@@ -2,34 +2,40 @@
   font-family: "Times New Roman", Serif;
 }
 .mypage {
+  position: fixed;
+  top: 5%;
+  left: 46.5%;
   font-family: "Times New Roman", Serif;
   text-align: center;
+  font-size: 40px;
 }
 .email {
-  top: 45px;
+  top: 130px;
   text-align: center;
 }
 .username {
-  top: 55px;
+  top: 140px;
   text-align: center;
 }
 .socialinfo {
-  top: 65px;
+  top: 150px;
   text-align: center;
 }
 .password {
-  top: 75px;
+  top: 160px;
   text-align: center;
 }
 .editbtn {
+  position: fixed;
+  top: 400px;
+  left: 50%;
   height: 40px;
   width: 100px;
   cursor: pointer;
   background-color: black;
   color: white;
   line-height: 1px;
-  margin-top: 185px;
-  margin-left: 585px;
+  text-align: center;
   border-radius: 5px;
   border-style: none;
   font-family: "Times New Roman", Serif;
