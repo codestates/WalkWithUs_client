@@ -42,7 +42,15 @@ class SignUp extends Component {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              if (email && password && username) {
+              if(email&&username && password.length<=6){
+                swal({
+                  title: "Info",
+                  text: "비밀번호는 7자리 이상이어야 합니다",
+                  icon: "info",
+                })
+              }
+
+              else if (email && username && password.length >=7) {
                 axios
                   .post(`http://${IP_ADDRESS}:3001/user/signup`, {
                     email: email,
