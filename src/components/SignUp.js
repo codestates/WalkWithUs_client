@@ -29,7 +29,9 @@ class SignUp extends Component {
   render() {
     const { email, password, username } = this.state;
     const { isLogin, userInfo } = this.props;
+    const {classes} = this.props
     if (!isLogin) {
+
       return (
         <div className="signupcontainer">
           <div>
@@ -90,7 +92,7 @@ class SignUp extends Component {
                 <TextField
                   className="username2"
                   type="text"
-                  placeholder="아이디를 입력하세요"
+                  placeholder="닉네임을 입력하세요"
                   onChange={this.handleInputValue("username")}
                 ></TextField>
               </div>
