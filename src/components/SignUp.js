@@ -4,6 +4,8 @@ import "./SignUp.css";
 import axios from "axios";
 import backgroundimg2 from "../image/backgroundimg2.jpg";
 import TextField from "@material-ui/core/TextField";
+import swal from 'sweetalert';
+
 
 
 const IP_ADDRESS = "127.0.0.1";
@@ -47,11 +49,23 @@ class SignUp extends Component {
                   })
                   .then((res) => {
                     this.props.history.push(`/`);
-                    alert("회원가입이 완료되었습니다!");
+                    swal({
+                      title: "Success",
+                      text: "회원가입이 완료되었습니다!",
+                      icon: "success",
+                    })
                   })
-                  .catch((err) => alert("You are already a registered member"));
+                  .catch((err) =>  swal({
+                      title: "Fail",
+                      text: "이미 가입된 회원입니다",
+                      icon: "error",
+                    }));
               } else {
-                alert("회원정보를 모두 입력해 주세요");
+                swal({
+                  title: "Fail",
+                  text: "회원정보를 모두 입력해 주세요",
+                  icon: "error",
+                })
               }
             }}
           >

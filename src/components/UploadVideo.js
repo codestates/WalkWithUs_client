@@ -5,6 +5,7 @@ import { withRouter,Link } from "react-router-dom";
 import logo from "../image/walkLogoWhite.png"
 import backgroundimgUp from "../image/backgroundimgUp.jpg"
 import {GlobalStyle} from "./MainStyle";
+import swal from 'sweetalert';
 
 
 const IP_ADDRESS = "127.0.0.1";
@@ -27,19 +28,38 @@ class UploadVideo extends Component {
     formData.append("userfile", this.state.selectedFile);
     
     if(this.state.selectedFile === null || this.state.selectedFile === undefined){
-     alert("파일을 올려주세요") 
+      swal({
+        title: "Info",
+        text: "파일을 올려주세요",
+        icon: "info",
+      })
     }
     else if((this.state.selectedFile.size > 31457280) || this.state.selectedFile.type !== "video/mp4"){
-      alert("파일의 용량은 30MB 이상일 수 없으며\n동영상은 mp4 형식만 지원합니다")
+      swal({
+        title: "Fail",
+        text: "파일의 용량은 30MB 이상일 수 없으며\n동영상은 mp4 형식만 지원합니다",
+        icon: "error",
+      })
     }
     else{await axios
       .post(`http://${IP_ADDRESS}:3001/video/videoup`, formData)
       .then((res) => {
         // console.log("res:", res);
-        alert("파일이 성공적으로 업로드되었습니다!");
+        swal({
+          title: "Success",
+          text: "파일이 성공적으로 업로드되었습니다!",
+          icon: "success",
+        })
         //this.props.history.push(`/`);
       })
-      .catch((err) => alert("파일 업로드에 실패하였습니다")) }
+      .catch((err) =>
+      swal({
+        title: "Fail",
+        text: "파일 업로드에 실패하였습니다",
+        icon: "error",
+      })
+      
+      )}
     // console.log(this.state.selectedFile.size)
     // console.log(this.state.selectedFile.type)
   };
