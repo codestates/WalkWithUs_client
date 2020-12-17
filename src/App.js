@@ -11,8 +11,8 @@ import axios from "axios";
 import './App.css';
 
 
-const IP_ADDRESS = "127.0.0.1";
-// const IP_ADDRESS = "52.78.59.129";
+// const IP_ADDRESS = "127.0.0.1";
+const IP_ADDRESS = "3.35.93.83";
 
 
 
