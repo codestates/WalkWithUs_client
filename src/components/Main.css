@@ -49,7 +49,9 @@ body {
 
 .uploadClick {
   position: fixed;
+
   top: 63.5%;
+
   left: 50%;
   margin-left: -136px;
   width: 400px;
