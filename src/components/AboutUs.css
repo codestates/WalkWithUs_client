@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
+
 .page1 {
   height: 600px;
   background: linear-gradient(#fff 20%);
@@ -129,7 +131,7 @@
 .aboutusbtn {
   width: 50px;
   height: 50px;
-  margin-top: 7px;
+  margin-top: 10px;
   margin-left: 5px;
 }
 .grid {

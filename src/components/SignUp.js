@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
 import axios from "axios";
 import backgroundimg2 from "../image/backgroundimg2.jpg";
-import { GlobalStyle, Wrapper } from "./MainStyle";
 import TextField from "@material-ui/core/TextField";
-// import backgroundimg2 from "../image/backgroundimg2.jpg";
-// const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost";
+import swal from 'sweetalert';
+
+
+
+// const IP_ADDRESS = "127.0.0.1";
+const IP_ADDRESS = "3.35.93.83";
+
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -26,7 +29,9 @@ class SignUp extends Component {
   render() {
     const { email, password, username } = this.state;
     const { isLogin, userInfo } = this.props;
+    const {classes} = this.props
     if (!isLogin) {
+
       return (
         <div className="signupcontainer">
           <div>
@@ -37,7 +42,15 @@ class SignUp extends Component {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              if (email && password && username) {
+              if(email&&username && password.length<=6){
+                swal({
+                  title: "Info",
+                  text: "비밀번호는 7자리 이상이어야 합니다",
+                  icon: "info",
+                })
+              }
+
+              else if (email && username && password.length >=7) {
                 axios
                   .post(`http://${IP_ADDRESS}:3001/user/signup`, {
                     email: email,
@@ -46,11 +59,23 @@ class SignUp extends Component {
                   })
                   .then((res) => {
                     this.props.history.push(`/`);
-                    alert("회원가입이 완료되었습니다!");
+                    swal({
+                      title: "Success",
+                      text: "회원가입이 완료되었습니다!",
+                      icon: "success",
+                    })
                   })
-                  .catch((err) => alert("You are already a registered member"));
+                  .catch((err) =>  swal({
+                      title: "Fail",
+                      text: "이미 가입된 회원입니다",
+                      icon: "error",
+                    }));
               } else {
-                alert("회원정보를 모두 입력해 주세요");
+                swal({
+                  title: "Fail",
+                  text: "회원정보를 모두 입력해 주세요",
+                  icon: "error",
+                })
               }
             }}
           >
@@ -75,7 +100,7 @@ class SignUp extends Component {
                 <TextField
                   className="username2"
                   type="text"
-                  placeholder="아이디를 입력하세요"
+                  placeholder="닉네임을 입력하세요"
                   onChange={this.handleInputValue("username")}
                 ></TextField>
               </div>

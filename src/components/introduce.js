@@ -42,6 +42,7 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>
+
             <img className="gwonyong" src={gwonyong} width="150px" />
             <p className="gwonyongname">
               Gwonyong Park <br />
@@ -65,6 +66,7 @@ export default function NestedGrid() {
               Jihee Yoon <br />
               <br />
               &middot; Full-stack, Translate, Design
+
               <br />
               &middot; Email: yjhe333@gmail.com
               <br />
@@ -73,6 +75,7 @@ export default function NestedGrid() {
               <br />
               저는 사람들을 돕고 성장하는
               <br /> 개발자가 되고 싶습니다.
+
             </p>
           </Paper>
         </Grid>

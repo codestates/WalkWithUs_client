@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect, withRouter} from "react-router-dom"
+import { Switch, Route, withRouter} from "react-router-dom"
 import Main from "./components/Main"
 import AboutUs from "./components/AboutUs"
 import MyPage from "./components/MyPage"
@@ -10,9 +10,11 @@ import Nav from "./components/Nav"
 import axios from "axios";
 import './App.css';
 
-// import logo from './logo.svg';
-// const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost"
+
+// const IP_ADDRESS = "127.0.0.1";
+const IP_ADDRESS = "3.35.93.83";
+
+
 
 class App extends React.Component {
     constructor(props) {

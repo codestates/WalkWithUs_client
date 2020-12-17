@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./MyPage.css";
 import axios from "axios";
-
 import TextField from "@material-ui/core/TextField";
 import { withRouter } from "react-router-dom";
 import backgroundimg from "../image/backgroundimg.jpg";
+import swal from 'sweetalert';
 
-const IP_ADDRESS = "127.0.0.1";
 
-// const IP_ADDRESS = "52.78.59.129";
+// const IP_ADDRESS = "127.0.0.1";
+const IP_ADDRESS = "3.35.93.83";
+
 
 
 const axiosInstance = axios.create({
@@ -66,10 +66,19 @@ class MyPage extends Component {
                 })
                 .then((res) => {
                   handleIsLoginChange(JSON.parse(res.config.data));
-                  alert("회원정보가 수정되었습니다");
+                  swal({
+                    title: "Success",
+                    text: "회원정보가 수정되었습니다",
+                    icon: "success",
+                  })
+      
                 })
                 .catch((err) => {
-                  alert("비밀번호를 확인해 주세요");
+                  swal({
+                    title: "Fail",
+                    text: "비밀번호를 확인해 주세요",
+                    icon: "error",
+                  });
                   console.log(err);
                 });
             }}

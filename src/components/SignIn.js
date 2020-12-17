@@ -2,9 +2,14 @@ import React, {Component} from "react";
 import "./SignIn.css";
 import {Link, withRouter} from "react-router-dom";
 import axios from "axios";
+import swal from 'sweetalert';
 
-// const IP_ADDRESS = "52.78.59.129";
-const IP_ADDRESS = "localhost"
+
+// const IP_ADDRESS = "127.0.0.1";
+const IP_ADDRESS = "3.35.93.83";
+
+
+
 const axiosInstance = axios.create({
   withCredentials: false,
 });
@@ -53,14 +58,25 @@ class SignIn extends Component {
                         
                           handleIsLoginChange(res.data);
                           this.props.history.push(`/`);
-                          
+                          swal({
+                            title: "Success",
+                            text: "로그인 되었습니다!",
+                            icon: "success",
+                          })
                         })
                         .catch((err) => {
-                          alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다");
-                          console.log(err);
+                          swal({
+                            title: "Fail",
+                            text: "가입하지 않은 아이디이거나, 잘못된 비밀번호입니다",
+                            icon: "error",
+                          })
                         });
                     } else {
-                      alert("아이디와 비밀번호를 모두 입력해 주세요");
+                      swal({
+                        title: "Fail",
+                        text: "아이디와 비밀번호를 모두 입력해 주세요",
+                        icon: "error",
+                      })
                     }
                   }}
                 >

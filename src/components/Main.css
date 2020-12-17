@@ -4,11 +4,11 @@
 video {
   width: 100%;
 }
-
 body {
   padding: 0px;
   margin: 0px;
 }
+
 .videoContainer {
   width: 100%;
   height: 1008px;
@@ -49,7 +49,9 @@ body {
 
 .uploadClick {
   position: fixed;
-  top: 68%;
+
+  top: 63.5%;
+
   left: 50%;
   margin-left: -136px;
   width: 400px;

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-
 import reset from "styled-reset";
+
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
@@ -17,10 +17,6 @@ const GlobalStyle = createGlobalStyle`
         background-size:cover;
     }
 `;
-const Wrapper = styled.section`
-
- 
-`;
 
 
-export {GlobalStyle, Wrapper}
+export {GlobalStyle}

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./AboutUs.css";
-import axios from "axios";
 import { withRouter } from "react-router-dom";
 import Introduce from "./introduce";
 import ShareStory from "./shareYourStory";
@@ -12,11 +10,13 @@ import walkingtext2 from "../image/walkingtext2.png";
 import walkingtext3 from "../image/walkingtext3.png";
 import walkingtext4 from "../image/walkingtext4.png";
 
+
 import image1 from "../image/image1.jpg";
 import instagramlogo from "../image/instagramlogo.jpg";
 import video from "../video/share.mp4";
 import arrow from "../image/arrow.jpg";
 import testimg from "../image/testimg.png";
+
 class AboutUs extends Component {
   constructor(props) {
     super(props);
