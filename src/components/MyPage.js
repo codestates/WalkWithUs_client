@@ -11,10 +11,6 @@ import swal from 'sweetalert';
 const IP_ADDRESS = "3.35.93.83";
 
 
-
-const axiosInstance = axios.create({
-  withCredentials: true,
-});
 class MyPage extends Component {
   constructor(props) {
     super(props);
@@ -42,13 +38,13 @@ class MyPage extends Component {
   };
   render() {
     const { email, username, password, socialinfo } = this.state;
-    const { isLogin, userInfo, handleIsLoginChange } = this.props;
+    const { isLogin, handleIsLoginChange } = this.props;
     if (isLogin) {
       return (
         <div className="mypageContainer">
 
           <div>
-            <img className="backgroundimg" src={backgroundimg}></img>
+            <img className="backgroundimg" src={backgroundimg} alt="profile"></img>
           </div>
 
           <h1 className="mypage">My page</h1>
@@ -71,7 +67,7 @@ class MyPage extends Component {
                     text: "회원정보가 수정되었습니다",
                     icon: "success",
                   })
-      
+
                 })
                 .catch((err) => {
                   swal({

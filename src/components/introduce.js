@@ -25,7 +25,7 @@ export default function NestedGrid() {
       <React.Fragment>
         <Grid className="grid" item xs={3}>
           <Paper className={classes.paper}>
-            <img className="juyeon" src={juyeon} width="150px" />
+            <img className="juyeon" src={juyeon} width="150px" alt="profile" />
             <p className="juyeonname">
               Juyeon Lee <br />
               <br />
@@ -43,7 +43,7 @@ export default function NestedGrid() {
         <Grid item xs={3}>
           <Paper className={classes.paper}>
 
-            <img className="gwonyong" src={gwonyong} width="150px" />
+            <img className="gwonyong" src={gwonyong} width="150px" alt="profile" />
             <p className="gwonyongname">
               Gwonyong Park <br />
               <br />
@@ -61,7 +61,7 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>
-            <img className="jihee" src={jihee} width="150px" />
+            <img className="jihee" src={jihee} width="150px" alt="profile" />
             <p className="jiheename">
               Jihee Yoon <br />
               <br />

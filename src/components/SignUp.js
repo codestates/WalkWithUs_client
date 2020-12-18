@@ -28,21 +28,21 @@ class SignUp extends Component {
   };
   render() {
     const { email, password, username } = this.state;
-    const { isLogin, userInfo } = this.props;
-    const {classes} = this.props
+    const { isLogin } = this.props;
+
     if (!isLogin) {
 
       return (
         <div className="signupcontainer">
           <div>
-            <img className="backgroundimg2" src={backgroundimg2}></img>
+            <img className="backgroundimg2" src={backgroundimg2} alt="profile"></img>
           </div>
           <h1 className="signup">Sign up</h1>
 
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              if(email&&username && password.length<=6){
+              if (email && username && password.length <= 6) {
                 swal({
                   title: "Info",
                   text: "비밀번호는 7자리 이상이어야 합니다",
@@ -50,7 +50,7 @@ class SignUp extends Component {
                 })
               }
 
-              else if (email && username && password.length >=7) {
+              else if (email && username && password.length >= 7) {
                 axios
                   .post(`http://${IP_ADDRESS}:3001/user/signup`, {
                     email: email,
@@ -65,11 +65,11 @@ class SignUp extends Component {
                       icon: "success",
                     })
                   })
-                  .catch((err) =>  swal({
-                      title: "Fail",
-                      text: "이미 가입된 회원입니다",
-                      icon: "error",
-                    }));
+                  .catch((err) => swal({
+                    title: "Fail",
+                    text: "이미 가입된 회원입니다",
+                    icon: "error",
+                  }));
               } else {
                 swal({
                   title: "Fail",

@@ -25,7 +25,7 @@ class Nav extends Component {
               return (
                 <div className="loginMainNav">
                   <Link to={`/`}>
-                    <img className="walkWithUsBtn" src={logo} />
+                    <img className="walkWithUsBtn" src={logo} alt="profile" />
                   </Link>
                   <span className="loginRightSide">
                     <Link to={`/aboutus`} className="aboutUsNav ">
@@ -52,7 +52,7 @@ class Nav extends Component {
               return (
                 <div className="loginMypageNav">
                   <Link to={`/`}>
-                    <img className="walkWithUsBtn" src={logo} />
+                    <img className="walkWithUsBtn" src={logo} alt="profile" />
                   </Link>
 
                   <span className="logOut" onClick={handleIsLogoutChange}>
@@ -74,7 +74,7 @@ class Nav extends Component {
               return (
                 <div className="logOutMainNav">
                   <Link to={`/`}>
-                    <img className="walkWithUsBtn" src={logo} />
+                    <img className="walkWithUsBtn" src={logo} alt="profile" />
                   </Link>
                   <span className="logOutRightSide">
                     <Link to={`/aboutus`} className="aboutUsNav">
@@ -101,7 +101,7 @@ class Nav extends Component {
               return (
                 <div className="signupNav">
                   <Link to={`/`}>
-                    <img className="walkWithUsBtn" src={logo} />
+                    <img className="walkWithUsBtn" src={logo} alt="profile" />
                   </Link>
                 </div>
               );

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./AboutUs.css";
 import { withRouter } from "react-router-dom";
 import Introduce from "./introduce";
-import ShareStory from "./shareYourStory";
 import logo from "../image/walkLogoBlack.png";
 import walkingtext from "../image/walkingtext.png";
 import walkingtext2 from "../image/walkingtext2.png";
@@ -30,22 +29,22 @@ class AboutUs extends Component {
             <div className="challenge container">
               <header className="aboutUs">
                 <Link to={`/`}>
-                  <img className="aboutusbtn" src={logo} />
+                  <img className="aboutusbtn" src={logo} alt="profile" />
                 </Link>
               </header>
             </div>
             <div>
               <span>
-                <img className="walkingtext" src={walkingtext} />
+                <img className="walkingtext" src={walkingtext} alt="profile" />
               </span>
               <span>
-                <img className="walkingtext2" src={walkingtext2} />
+                <img className="walkingtext2" src={walkingtext2} alt="profile" />
               </span>
               <span>
-                <img className="walkingtext3" src={walkingtext3} />
+                <img className="walkingtext3" src={walkingtext3} alt="profile" />
               </span>
               <span>
-                <img className="walkingtext4" src={walkingtext4} />
+                <img className="walkingtext4" src={walkingtext4} alt="profile" />
               </span>
             </div>
 
@@ -71,7 +70,7 @@ class AboutUs extends Component {
                 to={{ pathname: "https://www.instagram.com/walkwithus3/" }}
                 target="_blank"
               >
-                <img className="instagramlogo" src={instagramlogo} />
+                <img className="instagramlogo" src={instagramlogo} alt="profile" />
               </Link>
             </span>
             <video
@@ -83,10 +82,10 @@ class AboutUs extends Component {
               <source src={video} type="video/mp4" />
             </video>
             <div className="page1">
-              <img className="image1" src={image1} />
+              <img className="image1" src={image1} alt="profile" />
             </div>{" "}
             <div className="wrap">
-              <img className="arrow" src={arrow} />
+              <img className="arrow" src={arrow} alt="profile" />
             </div>
           </div>
           <div className="page4">
@@ -95,7 +94,7 @@ class AboutUs extends Component {
             <br></br>
             <br></br>{" "}
             <div className="testimg" width="1%">
-              <img src={testimg} />
+              <img src={testimg} alt="profile" />
             </div>
             <Introduce />
           </div>
@@ -104,7 +103,6 @@ class AboutUs extends Component {
     );
   }
 }
-{
-}
+
 
 export default withRouter(AboutUs);
