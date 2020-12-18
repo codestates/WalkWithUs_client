@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 
 
 // const IP_ADDRESS = "127.0.0.1";
-const IP_ADDRESS = "3.35.93.83";
+const IP_ADDRESS = "13.124.114.15";
 
 
 
