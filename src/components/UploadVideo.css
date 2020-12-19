@@ -54,9 +54,9 @@
 .caution {
   position: fixed;
   font-family: "Times New Roman", Serif;
-  font-size: 18px;
+  font-size: 100%;
   right: 0px;
   bottom: 3px;
-  left: 42.5%;
+  left: 43%;
   margin-right: 23px;
 }
