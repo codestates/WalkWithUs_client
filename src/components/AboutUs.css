@@ -247,6 +247,7 @@
 }
 .cloudImg {
   position: absolute;
-  bottom: -2100px;
+  width: 100%;
+  bottom: -2200px;
   z-index: -1;
 }
