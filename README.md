@@ -19,10 +19,15 @@ I hope that the feelings of depression caused by this can be relieved of a littl
 
 We wish our service a little hope for people.
 
-# 팀원소개 
-박권용 
-윤지희
-이주연
+# ![We are "Walk3😎"](https://github.com/codestates/WalkWithUs_client/wiki/Team-Info)
+|  이름 | 포지션 |
+|:--------|:--------:|
+|**박권용** | <center>Front-End</center> |
+|**윤지희** | <center>Full Stack </center> |
+|**이주연** | <center>Back-End</center> |
+ 
+
+
 #  어떤 기술이 사용되었나요? =>멘트수정🔴
 ![](https://ifh.cc/g/Q6yiiQ.jpg)
 
