@@ -8,7 +8,9 @@
 
 저희 서비스가 사람들에게 작은 희망이 될 수 있기를 기원합니다. 
 
-👉 https://walkwithus3.com/
+👉 https://walkwithus3.com/  
+
+👉 https://www.walkwithus3.com/
 ***
 
 About us 
@@ -19,7 +21,8 @@ I hope that the feelings of depression caused by this can be relieved of a littl
 
 We wish our service a little hope for people.
 
-# ![We are "Walk3😎"](https://github.com/codestates/WalkWithUs_client/wiki/Team-Info)
+# [We are "Walk3😎"](https://github.com/codestates/WalkWithUs_client/wiki/Team-Info)
+
 |  이름 | 포지션 |
 |:--------|:--------:|
 |**박권용** | <center>Front-End</center> |
@@ -28,7 +31,7 @@ We wish our service a little hope for people.
  
 
 
-#  어떤 기술이 사용되었나요? =>멘트수정🔴
+#  어떤 기술이 사용되었나요?🛠
 ![](https://ifh.cc/g/Q6yiiQ.jpg)
 
 
