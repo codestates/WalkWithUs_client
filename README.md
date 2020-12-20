@@ -35,6 +35,11 @@ We wish our service a little hope for people.
 ![](https://ifh.cc/g/Q6yiiQ.jpg)
 
 
+
+# 더 자세한 사항들은 위키를 참고해주세요
+https://github.com/codestates/WalkWithUs_client/wiki
+
+
 # Getting started   
 
 1. ```npm install``` 혹은  ```yarn start```를 통해 모듈을 설치해주세요.
