@@ -8,9 +8,9 @@
 
 저희 서비스가 사람들에게 작은 희망이 될 수 있기를 기원합니다. 
 
-👉 https://walkwithus3.com/  
+👉 http://walkwithus3.com/  
 
-👉 https://www.walkwithus3.com/
+👉 http://www.walkwithus3.com/
 ***
 
 About us 
