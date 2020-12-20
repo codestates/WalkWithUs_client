@@ -19,5 +19,19 @@ I hope that the feelings of depression caused by this can be relieved of a littl
 
 We wish our service a little hope for people.
 
+# 팀원소개 
+박권용 
+윤지희
+이주연
 #  어떤 기술이 사용되었나요? =>멘트수정🔴
-![](https://ifh.cc/g/y5YWhD.png)
+![](https://ifh.cc/g/Q6yiiQ.jpg)
+
+
+# Getting started   
+
+1. ```npm install``` 혹은  ```yarn start```를 통해 모듈을 설치해주세요.
+
+2.  ```npm start```를 통해 페이지를 시작할 수 있습니다. 
+
+3. 로그인 전에 서버가 연결되어 있는지 확인해주세요.
+
