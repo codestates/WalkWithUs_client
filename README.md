@@ -38,7 +38,7 @@ We wish our service a little hope for people.
 
 
 # 더 자세한 사항들은 위키를 참고해주세요
-https://github.com/codestates/WalkWithUs_client/wiki
+👉 https://github.com/codestates/WalkWithUs_client/wiki
 
 
 # Getting started   
