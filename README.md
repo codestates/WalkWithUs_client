@@ -1,6 +1,6 @@
 # WalkWithUs
 ![](https://ifh.cc/g/IStc5V.png)
-### WalkWithUs는 "산책 영상들을 공유할 수 있는 힐링 서비스입니다."
+### WalkWithUs는 "산책 영상을 공유할 수 있는 힐링 서비스입니다."
 
 
 
